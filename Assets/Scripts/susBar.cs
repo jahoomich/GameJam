@@ -14,8 +14,8 @@ public class susBar : MonoBehaviour {
         if (susBarLevel < 0){
             susBarLevel = 0;
         }
-        displayBar();
         susCheck();
+        displayBar();
     }
 
     void susCheck() {
