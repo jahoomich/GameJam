@@ -62,7 +62,7 @@ public class Entity : MonoBehaviour
         {
             health += (change * debuff);
             //still haven't discussed how the debuff is reset
-            //debuff = 1;
+            debuff = 1;
         }
         //occurs if changehealth action is positive/healing (or does nothin')
         else
