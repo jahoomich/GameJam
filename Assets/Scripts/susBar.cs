@@ -8,23 +8,18 @@ public class susBar : MonoBehaviour {
     [SerializeField] float maxSus = 100;
     [SerializeField] float susSize = 0;
     [SerializeField] float susBarSize = 2;
-    void Start() {
-        displayBar();
-    }
-
-    // Update is called once per frame
-    /*void Update() {
-        displayBar();
-    }*/
 
     void susChange(float susVal) {
         if(susVal < 0) {
             susBarLevel += susVal;
+            displayBar();
             susCheck();
         }else {
             susBarLevel -= susVal;
-            if(susBarLevel < 0) { 
+            displayBar();
+            if (susBarLevel < 0) { 
                 susBarLevel = 0;
+                displayBar();
             }
         }
     }
