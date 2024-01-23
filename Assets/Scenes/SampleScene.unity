@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104508437}
   - component: {fileID: 104508438}
+  - component: {fileID: 104508439}
   m_Layer: 0
   m_Name: Wizard Character
   m_TagString: Player
@@ -150,7 +151,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.66, y: -2.94, z: -0.024292268}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1075287908}
@@ -196,8 +197,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5911966, g: 0.754717, b: 0.38732645, a: 1}
+  m_Sprite: {fileID: 1867539438, guid: 9143d61ed3ffec94690807a88cc47d40, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -207,6 +208,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &104508439
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104508436}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b769074ae78c3f148be37f9103f607d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &153635566
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSpeed: 5
-  zoomFactor: 2
+  zoomFactor: 1
   defaultCameraSize: 0
 --- !u!1 &630159912
 GameObject:
@@ -596,7 +618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134, y: 52}
+  m_AnchoredPosition: {x: -134, y: 25}
   m_SizeDelta: {x: 120.2873, y: 98.4784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644834786
@@ -791,7 +813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 305, y: 208.80008}
+  m_AnchoredPosition: {x: 305, y: 176}
   m_SizeDelta: {x: 84.1032, y: 34.3998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1446944190
