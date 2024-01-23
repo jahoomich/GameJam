@@ -15,6 +15,14 @@ public class CameraMovement : MonoBehaviour
     private Camera currentCamera;
 
     public Entity wizardCharacter;
+    public Entity knightCharacter;
+    public Entity archerCharacter;
+    public Entity bossCharacter;
+
+    public int currentCharacterZoomed = 0;
+
+
+
     void Start()
     {
         currentCamera = GetComponent<Camera>();
@@ -24,11 +32,23 @@ public class CameraMovement : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (currentCharacterZoomed == 0)
         {
             ZoomOnCharacter(wizardCharacter);
         }
-        
+        else if (currentCharacterZoomed == 1)
+        {
+            ZoomOnCharacter(archerCharacter);
+        }
+        else if (currentCharacterZoomed == 2)
+        {
+            ZoomOnCharacter(knightCharacter);
+        }
+        else if (currentCharacterZoomed == 3)
+        {
+            ZoomOnCharacter(bossCharacter);
+        }
+
     }
 
     void ZoomOnCharacter(Entity character)
