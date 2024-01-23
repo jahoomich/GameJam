@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class susBar : MonoBehaviour {
-    float susBarLevel = 70;
+    float susBarLevel = 0;
     [SerializeField] float maxSus = 100;
     [SerializeField] float susSize = 0;
     [SerializeField] float susBarSize = 2;
