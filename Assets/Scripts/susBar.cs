@@ -10,24 +10,18 @@ public class susBar : MonoBehaviour {
     [SerializeField] float susBarSize = 2;
 
     void susChange(float susVal) {
-        if(susVal < 0) {
-            susBarLevel += susVal;
-            displayBar();
-            susCheck();
-        }else {
-            susBarLevel -= susVal;
-            displayBar();
-            if (susBarLevel < 0) { 
-                susBarLevel = 0;
-                displayBar();
-            }
+        susBarLevel += susVal;
+        if (susBarLevel < 0){
+            susBarLevel = 0;
         }
+        displayBar();
+        susCheck();
     }
 
     void susCheck() {
         if (susBarLevel >= maxSus) { 
             // change scene
-            //SceneManager.LoadScene("endscene")
+            //SceneManager.LoadScene("GameOverScene")
         }
     }
 
