@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    private float maxhealth;
+    [SerializeField]private int id; //may go unused, but ideally, could be used to target
+    [SerializeField]private float maxhealth;
     private float health;
     private int debuff; //should always multiply damage
 
@@ -20,11 +21,15 @@ public class Entity : MonoBehaviour
         }
     }
 
+    public bool ID
+    {
+        get { return ID; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         debuff = 1;
-        maxhealth = 100;
         health = maxhealth;
     }
 
