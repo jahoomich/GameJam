@@ -21,7 +21,7 @@ public class CameraMovement : MonoBehaviour
     
     void Update()
     {
-        ZoomOnCharacter();
+        /*ZoomOnCharacter();*/
     }
 
     void ZoomOnCharacter(Entity character)
