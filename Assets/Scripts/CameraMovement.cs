@@ -21,6 +21,11 @@ public class CameraMovement : MonoBehaviour
     
     void Update()
     {
+        /*ZoomOnCharacter();*/
+    }
+
+    void ZoomOnCharacter(Entity character)
+    {
         float targetSize = defaultCameraSize * zoomFactor;
         if (targetSize != currentCamera.orthographicSize)
         {
