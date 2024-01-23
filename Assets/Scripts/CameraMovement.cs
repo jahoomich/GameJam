@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class CameraMovement : MonoBehaviour
@@ -12,6 +13,8 @@ public class CameraMovement : MonoBehaviour
     public float defaultCameraSize = 0f;
 
     private Camera currentCamera;
+
+    public Entity wizardCharacter;
     void Start()
     {
         currentCamera = GetComponent<Camera>();
@@ -21,7 +24,11 @@ public class CameraMovement : MonoBehaviour
     
     void Update()
     {
-        /*ZoomOnCharacter();*/
+        if (Input.GetKeyDown("space"))
+        {
+            ZoomOnCharacter(wizardCharacter);
+        }
+        
     }
 
     void ZoomOnCharacter(Entity character)
@@ -29,8 +36,10 @@ public class CameraMovement : MonoBehaviour
         float targetSize = defaultCameraSize * zoomFactor;
         if (targetSize != currentCamera.orthographicSize)
         {
+            
             currentCamera.orthographicSize = Mathf.Lerp(currentCamera.orthographicSize,
     targetSize, Time.deltaTime * cameraSpeed);
+            currentCamera.transform.position = new Vector3(character.transform.position.x-0.4f, character.transform.position.y+0.6f, -10f);
         }
     }
 }
