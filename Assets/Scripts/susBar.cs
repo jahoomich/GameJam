@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class susBar : MonoBehaviour {
     float susBarLevel = 0;
@@ -19,6 +20,7 @@ public class susBar : MonoBehaviour {
     void susChange(float susVal) {
         if(susVal < 0) {
             susBarLevel += susVal;
+            susCheck();
         }else {
             susBarLevel -= susVal;
             if(susBarLevel < 0) { 
@@ -30,6 +32,7 @@ public class susBar : MonoBehaviour {
     void susCheck() {
         if (susBarLevel >= maxSus) { 
             // change scene
+            //SceneManager.LoadScene("endscene")
         }
     }
 
