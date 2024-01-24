@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -8,7 +9,7 @@ public class Entity : MonoBehaviour
     [SerializeField]private int id; //may go unused, but ideally, could be used to target
     [SerializeField]private float maxhealth;
     public float health;
-    private int debuff; //should always multiply damage
+    public int debuff; //should always multiply damage
 
     public GameObject[] targets;
 
@@ -43,17 +44,20 @@ public class Entity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Opponent health: " + targets[0].GetComponent<Entity>().health);
+        //Debug.Log("Opponent health: " + targets[0].GetComponent<Entity>().health);
     }
 
     public void ChangeDebuff(int newdebuff = 2)
     {
-        debuff = newdebuff;
+        foreach (GameObject r in targets)
+        {
+            r.GetComponent<Entity>().debuff = newdebuff;
+        }
     }
 
     public void attack(int damage)
     {
-        if (gMgr.actionType == 1 && gMgr.nextTurn == false)
+        if (gMgr.actionType == 1 && gMgr.nextTurn == false && gMgr.memberIndex <2)
         {
             foreach (GameObject recipient in targets)
             {
@@ -62,6 +66,16 @@ public class Entity : MonoBehaviour
             
         }
         //do sumn?
+    }
+
+    public void attackParty(int damage) {
+        if (gMgr.memberIndex == 3)
+        {
+            foreach (GameObject r in targets)
+            {
+                r.GetComponent<Entity>().ChangeHealth(damage * debuff);
+            }
+        }
     }
 
    

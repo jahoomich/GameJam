@@ -26,7 +26,8 @@ public class gameMgr : MonoBehaviour
     //member for the cancel button game object
     public GameObject cancelBtn;
 
-    public GameObject x;
+    ///public GameObject x;
+    //public GameObject y;
 
     private void Start()
     {
@@ -35,11 +36,12 @@ public class gameMgr : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("Boss health is: " + x.GetComponent<Entity>().health);
-
-        Debug.Log("Active Member is: " + partyMembers[memberIndex]);
-        Debug.Log("Action type is: " + actionType);
-        Debug.Log("Next turn value: " + nextTurn);
+        //Debug.Log("Boss health is: " + x.GetComponent<Entity>().health);
+        //Debug.Log("Knight health is: " + y.GetComponent<Entity>().health);
+        //Debug.Log("Index is: " + memberIndex);
+        //Debug.Log("Active Member is: " + partyMembers[memberIndex]);
+        //Debug.Log("Action type is: " + actionType);
+        //Debug.Log("Next turn value: " + nextTurn);
 
         switch (actionType) 
         {
