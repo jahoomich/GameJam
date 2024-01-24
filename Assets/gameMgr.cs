@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class gameMgr : MonoBehaviour
 {
+    //bigfatbum
+
     public int memberIndex = 0;
     public bool nextTurn = false;
     public static bool wizardAction = false;
