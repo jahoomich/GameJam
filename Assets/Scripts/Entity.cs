@@ -7,9 +7,14 @@ public class Entity : MonoBehaviour
 {
     [SerializeField]private int id; //may go unused, but ideally, could be used to target
     [SerializeField]private float maxhealth;
-    private float health;
+    public float health;
     private int debuff; //should always multiply damage
 
+    public GameObject[] targets;
+
+    public GameObject mgr;
+    private gameMgr gMgr;
+    
     //Alive property checks health values, if it's above 0, target is considered alive
     //else, they're dead
     public bool Alive 
@@ -31,12 +36,14 @@ public class Entity : MonoBehaviour
     {
         debuff = 1;
         health = maxhealth;
+        gMgr = mgr.GetComponent<gameMgr>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("Opponent health: " + targets[0].GetComponent<Entity>().health);
     }
 
     public void ChangeDebuff(int newdebuff = 2)
@@ -44,14 +51,20 @@ public class Entity : MonoBehaviour
         debuff = newdebuff;
     }
 
-    public void Attack(List<Entity> target, int damage)
+    public void attack(int damage)
     {
-        foreach (Entity recipient in target)
+        if (gMgr.actionType == 1 && gMgr.nextTurn == false)
         {
-            recipient.ChangeHealth(damage);
+            foreach (GameObject recipient in targets)
+            {
+                recipient.GetComponent<Entity>().ChangeHealth(damage);
+            }
+            
         }
         //do sumn?
     }
+
+   
 
     //if change > 0, action is healing,
     //if change < 0, action is damaging

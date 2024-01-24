@@ -6,63 +6,122 @@ using UnityEngine.UI;
 
 public class gameMgr : MonoBehaviour
 {
-    public static int memberIndex = 0;
-    public static bool nextTurn = false;
+    public int memberIndex = 0;
+    public bool nextTurn = false;
     public static bool wizardAction = false;
+
+    bool canPerform = false;
     //string array to store the party members
     string[] partyMembers = { "wizard", "knight", "archer", "boss"};
 
+    //integer member for the action type
+    public int actionType;
+    
     //two buttons to store 
     public GameObject[] wizardButtons = new GameObject[2];
 
     //public GameObject ntb;
     public GameObject actionBtn;
 
+    //member for the cancel button game object
+    public GameObject cancelBtn;
+
+    public GameObject x;
+
     private void Start()
     {
         memberIndex = 0;
+        actionType = 0;
     }
     private void Update()
     {
+        Debug.Log("Boss health is: " + x.GetComponent<Entity>().health);
 
         Debug.Log("Active Member is: " + partyMembers[memberIndex]);
+        Debug.Log("Action type is: " + actionType);
+        Debug.Log("Next turn value: " + nextTurn);
+
+        switch (actionType) 
+        {
+            case 0:
+                canPerform = false; break;
+            case 1:
+                canPerform = true; break;
+            case 2:
+                canPerform = true; break;
+        }
+
+        //responses to nextTurn values
+        switch (nextTurn) 
+        {
+            //if it is set to true -> I want to remove the cancel button
+            case true:
+                cancelBtn.SetActive(false);
+                setWizBtns(false);
+                break;
+            case false:
+                if (memberIndex == 0 && canPerform == false)
+                {
+                    cancelBtn.SetActive(false);
+                }
+                else {
+                    cancelBtn.SetActive(true);
+                    setWizBtns(true);
+                }
+                
+                break;
+        }
+
+        if (canPerform == true)
+        {
+            actionBtn.SetActive(true);
+            
+        }
+        else {
+            actionBtn.SetActive(false);
+            
+        }
 
         //if the wizard is active
-        if (memberIndex == 0)
+        if (memberIndex == 0 && nextTurn == false)
         {
-            actionBtn.SetActive(false);
+            setWizBtns(true);
 
+            /*
             //display option to either attack or to perform traitor action
             for (int i = 0; i < 2; i++)
             {
                 wizardButtons[i].SetActive(true);
 
             }
+            */
         }
-        else {
-            actionBtn.SetActive(true);
-            for (int i = 0; i < 2; i++)
-            {
-                wizardButtons[i].SetActive(false);
-
-            }
+        else
+        {
+            cancelBtn.SetActive(false);
+            actionType = 1;
+            //actionBtn.SetActive(true);
+            setWizBtns(false);
         }
     }
 
-    public void dfdsfds() { }
+    public void setAction(int x) 
+    {
+        actionType = x;
+    }
 
-    public static void checkTurn() { 
+    public void checkTurn() { 
         //set the next turn variable to true
         nextTurn = true;
     }
 
-    public static void checkWizardTurn() {
+    public void checkWizardTurn() {
         if (memberIndex == 0) { 
             wizardAction = true;
         }
     }
 
-    public static void changeTurn() {
+    public void changeTurn() {
         
         
 
@@ -74,6 +133,7 @@ public class gameMgr : MonoBehaviour
             {
                 //reset back to 0
                 memberIndex = 0;
+                actionType = 0;
             }
             else
             {
@@ -84,6 +144,14 @@ public class gameMgr : MonoBehaviour
             wizardAction = false;
         }
         
+    }
+
+    void setWizBtns(bool x) {
+        for (int i = 0; i < 2; i++)
+        {
+            wizardButtons[i].SetActive(x);
+
+        }
     }
     
 
