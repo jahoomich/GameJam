@@ -44,6 +44,7 @@ public class Entity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //Debug.Log("Opponent health: " + targets[0].GetComponent<Entity>().health);
     }
 
