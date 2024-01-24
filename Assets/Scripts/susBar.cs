@@ -15,8 +15,8 @@ public class susBar : MonoBehaviour {
         if (susBarLevel < 0){
             susBarLevel = 0;
         }
-        susCheck();
         displayBar();
+        susCheck();
     }
 
     //checks if max sus has been reached
