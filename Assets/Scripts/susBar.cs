@@ -9,7 +9,8 @@ public class susBar : MonoBehaviour {
     [SerializeField] float susSize = 0;
     [SerializeField] float susBarSize = 2;
 
-    void susChange(float susVal) {
+    //takes in sus change value and adds it to total sus level
+    public void susChange(float susVal) {
         susBarLevel += susVal;
         if (susBarLevel < 0){
             susBarLevel = 0;
@@ -18,6 +19,7 @@ public class susBar : MonoBehaviour {
         displayBar();
     }
 
+    //checks if max sus has been reached
     void susCheck() {
         if (susBarLevel >= maxSus) { 
             // change scene
@@ -25,6 +27,7 @@ public class susBar : MonoBehaviour {
         }
     }
 
+    //updates the visual sus bar on the screen
     void displayBar() {
         susSize += ((susBarLevel / maxSus)*susBarSize);
         gameObject.transform.localScale = new Vector2(susSize, 0.1f);
