@@ -34,6 +34,6 @@ public class HealthBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetHealth(t.health);
+        /*SetHealth(t.health);*/
     }
 }
