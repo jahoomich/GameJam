@@ -53,6 +53,10 @@ public class gameMgr : MonoBehaviour
         //Debug.Log("Active Member is: " + partyMembers[memberIndex]);
         //Debug.Log("Action type is: " + actionType);
         //Debug.Log("Next turn value: " + nextTurnValid);
+        Debug.Log("Boss is alive: " + characters[3].GetComponent<entityScript>().Alive);
+
+        winCondition();
+        loseCondition();
 
         if (memberIndex == 0)
         {
@@ -107,9 +111,26 @@ public class gameMgr : MonoBehaviour
 
     }
 
-    
 
-    
+    //method to check if both archer and knight have died
+    public void winCondition()
+    {
+        //if other two party members have died 
+        if (characters[1].GetComponent<entityScript>().Alive == false && characters[2].GetComponent<entityScript>().Alive == false)
+        { 
+            //do something
+        }
+    }
+
+    //method to check if the boss health has reached 0 
+    public void loseCondition() 
+    {
+        //if the boss health has reached 0 or the susbar has reached a threshold
+        if (characters[3].GetComponent<entityScript>().Alive == false)
+        { 
+            //do something
+        }
+    }
 
     public void changeTurn() {
         if (memberIndex == 3)
