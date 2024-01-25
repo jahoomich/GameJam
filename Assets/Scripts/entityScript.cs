@@ -20,6 +20,11 @@ public class entityScript : Entity
     private void Update()
     {
         Debug.Log(name + "health is: " + health);
+
+        if (health <= 0)
+        {
+            m_Animator.SetTrigger("Dead");
+        }
     }
 
     public void attackTarget()
@@ -31,7 +36,6 @@ public class entityScript : Entity
 
     public void changeDebuff() {
         Debuff(debuffTargets);
-    }
 
-    
+    }
 }
