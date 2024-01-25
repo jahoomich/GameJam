@@ -4,34 +4,34 @@ using UnityEngine;
 
 public class entityScript : Entity
 {
-//    public GameObject[] attackTargets;
-//    public GameObject[] debuffTargets;
-//    public string name;
+    public GameObject[] attackTargets;
+    public GameObject[] debuffTargets;
+    public string name;
 
-//    Animator m_Animator; 
+    Animator m_Animator; 
    
 
-//    private void Start()
-//    {
-//        health = maxhealth;
-//        m_Animator = gameObject.GetComponent<Animator>();
-//    }
+    private void Start()
+    {
+        health = maxhealth;
+        m_Animator = gameObject.GetComponent<Animator>();
+    }
 
-//    private void Update()
-//    {
-//        Debug.Log(name + "health is: " + health);
-//    }
+    private void Update()
+    {
+        Debug.Log(name + "health is: " + health);
+    }
 
-//    public void attackTarget()
-//    {
-//        attack(attackTargets, -5);
-//        m_Animator.SetTrigger("Attack");
+    public void attackTarget()
+    {
+        attack(attackTargets, -5);
+        m_Animator.SetTrigger("Attack");
 
-//    }
+    }
 
-//    public void changeDebuff() {
-//        Debuff(debuffTargets);
-//    }
+    public void changeDebuff() {
+        Debuff(debuffTargets);
+    }
 
     
 }
