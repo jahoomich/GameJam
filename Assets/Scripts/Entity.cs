@@ -7,15 +7,15 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     [SerializeField]private int id; //may go unused, but ideally, could be used to target
-    [SerializeField]private float maxhealth;
-    public float health;
+    [SerializeField]protected float maxhealth;
+    protected float health;
     public int debuff; //should always multiply damage
 
-    public GameObject[] targets;
-
     public GameObject mgr;
-    private gameMgr gMgr;
+    private gameMgr gmgr;
+
     
+
     //Alive property checks health values, if it's above 0, target is considered alive
     //else, they're dead
     public bool Alive 
@@ -36,8 +36,8 @@ public class Entity : MonoBehaviour
     void Start()
     {
         debuff = 1;
-        health = maxhealth;
-        gMgr = mgr.GetComponent<gameMgr>();
+
+        gmgr = mgr.GetComponent<gameMgr>();
         
     }
 
@@ -48,27 +48,43 @@ public class Entity : MonoBehaviour
         //Debug.Log("Opponent health: " + targets[0].GetComponent<Entity>().health);
     }
 
-    public void ChangeDebuff(int newdebuff = 2)
+    public void triggerDebuff() {
+        if (gmgr.actionType == 2 ) {
+            gmgr.debuffCharacters[0].GetComponent<entityScript>().changeDebuff();
+        }
+    }
+
+    public void Debuff(GameObject[] targets)
     {
         foreach (GameObject r in targets)
         {
-            r.GetComponent<Entity>().debuff = newdebuff;
+            r.GetComponent<Entity>().debuff = 2;
         }
     }
 
-    public void attack(int damage)
-    {
-        if (gMgr.actionType == 1 && gMgr.nextTurn == false && gMgr.memberIndex <2)
+    /*
+    public void triggerAttack() {
+        if (gmgr.actionType == 1 && gmgr.canPerform == true)
         {
-            foreach (GameObject recipient in targets)
-            {
-                recipient.GetComponent<Entity>().ChangeHealth(damage);
-            }
-            
+            gmgr.characters[gmgr.memberIndex].GetComponent<entityScript>().attackTarget();
         }
+    }
+    */
+    public void attack(GameObject[] targets, int damage)
+    {
+        foreach (GameObject recipient in targets)
+        {
+            recipient.GetComponent<Entity>().ChangeHealth(damage);
+        }        
+        
+        
+
+        //gmgr.characters[gmgr.memberIndex].GetComponent<Entity>().ChangeHealth(damage);
+
         //do sumn?
     }
 
+    /*
     public void attackParty(int damage) {
         if (gMgr.memberIndex == 3)
         {
@@ -78,7 +94,7 @@ public class Entity : MonoBehaviour
             }
         }
     }
-
+    */
    
 
     //if change > 0, action is healing,
