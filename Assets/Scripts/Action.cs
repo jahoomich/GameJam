@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
+    public override string ToString() { return "YOU CREATED AN ACTION IDIOT"; }
     private int dmg; //damage should be negative by default to inflict damage, positive for healing
     public int Damage
     {
@@ -34,43 +35,56 @@ public class Action : MonoBehaviour
             return new List<int>();
         }
     }
-    //1-3 = elemental types, 4 = debuff, 5 = heal
-    private int type;
-    public int AttackType
+    //0-2 = fire, electric, poison, 3 = neutral (for heals/party attacks)
+    private int eltype;
+    public int ElementalType
     {
         get
         {
-            if (setup) { return type; }
+            if (setup) { return eltype; }
             Debug.Log("RUN SETUP ON ACTION FIRST");
             return 0;
         }
     }
 
-    ////for custom debuff amounts?
-    ////debuff strength, debuff timer
-    //private (int, int) debuff;
-    //public (int, int) Debuff
-    //{
-    //    get
-    //    {
-    //        if (setup) { return debuff; }
-    //        Debug.Log("RUN SETUP ON ACTION FIRST");
-    //        return (0, 0);
-    //    }
-    //}
+    private bool isdebuff;
+    public bool IsDebuff
+    {
+        get
+        {
+            if (setup) { return isdebuff; }
+            Debug.Log("RUN SETUP ON ACTION FIRST");
+            return false;
+        }
+    }
+
+    //for custom debuff amounts?
+    //debuff type, debuff timer
+    private (int, int) debuff;
+    public (int, int) Debuff
+    {
+        get
+        {
+            if (setup) { return debuff; }
+            Debug.Log("RUN SETUP ON ACTION FIRST");
+            return (0, 0);
+        }
+    }
 
     private bool setup = false;
-    
+
 
     //can only be setup once
-    public void Setup(int dmg, int basesuspicion, List<int> targets, int AttackType)
+    public void Setup(int dmg, int basesuspicion, List<int> targets, int element = 4, bool debuff = false, int debufftimer = 0)
     {
         if (setup == false)
         {
             this.dmg = dmg;
             this.suspicion = basesuspicion;
             this.target = targets;
-            this.type = AttackType;
+            this.eltype = element;
+            this.isdebuff = debuff;
+            this.debuff = (element, debufftimer);
         }
         else{ return; }
     }
