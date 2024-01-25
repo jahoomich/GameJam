@@ -11059,7 +11059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  maxhealth: 1000
+  maxhealth: 100
   health: 0
   debuff: 0
   mgr: {fileID: 1450576490}
