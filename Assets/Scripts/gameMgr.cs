@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameMgr : MonoBehaviour
 {
@@ -115,7 +116,8 @@ public class gameMgr : MonoBehaviour
     {
         //if other two party members have died 
         if (characters[1].GetComponent<entityScript>().Alive == false && characters[2].GetComponent<entityScript>().Alive == false)
-        { 
+        {
+            SceneManager.LoadScene("GameWonScreen");
             //do something
         }
     }
@@ -125,7 +127,8 @@ public class gameMgr : MonoBehaviour
     {
         //if the boss health has reached 0 or the susbar has reached a threshold
         if (characters[3].GetComponent<entityScript>().Alive == false)
-        { 
+        {
+            SceneManager.LoadScene("GameOverScreen");
             //do something
         }
     }

@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class gameOverScreen : MonoBehaviour
-{
-    /*public void Setup()
-    {
-        gameObject.SetActive(true);
+public class gameOverScreen : MonoBehaviour {
 
-    }*/
-
-    public void RestartButton()
-    {
-        //reloads jumpman scene
+    public void RestartButton() {
         SceneManager.LoadScene("FullScene");
     }
 }
