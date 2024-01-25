@@ -35,6 +35,8 @@ public class gameMgr : MonoBehaviour
     public GameObject[] debuffCharacters;
     ///public GameObject x;
     //public GameObject y;
+    //To call another class for sus bar
+    //public SusBar SusBar;
 
     private void Start()
     {
@@ -47,6 +49,7 @@ public class gameMgr : MonoBehaviour
         //Debug.Log("Boss health is: " + x.GetComponent<Entity>().health);
         //Debug.Log("Knight health is: " + y.GetComponent<Entity>().health);
         Debug.Log("Index is: " + memberIndex);
+        SusBar.memberCheck(memberIndex);
         //Debug.Log("Active Member is: " + partyMembers[memberIndex]);
         //Debug.Log("Action type is: " + actionType);
         //Debug.Log("Next turn value: " + nextTurnValid);
