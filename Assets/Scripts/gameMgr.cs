@@ -35,8 +35,6 @@ public class gameMgr : MonoBehaviour
     public GameObject[] debuffCharacters;
     ///public GameObject x;
     //public GameObject y;
-    //To call another class for sus bar
-    //public SusBar SusBar;
 
     private void Start()
     {

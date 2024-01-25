@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SusBar : MonoBehaviour
 {
@@ -16,9 +17,11 @@ public class SusBar : MonoBehaviour
 
     public void SetSus(float susVal) {
         if(susVal > 0) {
+            //adds suspicion value with multiplyer
             count++;
             slider.value += susVal*count;
             susCheck();
+        //makes sure the wizard is the one attacking
         }else if(susVal < 0 && check == 0) {
             count = 0;
             slider.value += susVal;
@@ -27,9 +30,10 @@ public class SusBar : MonoBehaviour
     void susCheck() {
         if (slider.value >= maxSus) {
             // change scene
-            //SceneManager.LoadScene("GameOverScene")
+            SceneManager.LoadScene("GameOverScene");
         }
     }
+    //keeps track of whos attacking
     public static void memberCheck(int member) {
         check = member;
     }
