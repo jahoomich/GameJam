@@ -14,7 +14,9 @@ public class Entity : MonoBehaviour
     public GameObject mgr;
     private gameMgr gmgr;
 
-    
+/*    Animator m_Animator;
+*/
+
 
     //Alive property checks health values, if it's above 0, target is considered alive
     //else, they're dead
@@ -38,7 +40,9 @@ public class Entity : MonoBehaviour
         debuff = 1;
 
         gmgr = mgr.GetComponent<gameMgr>();
-        
+
+/*        m_Animator = gameObject.GetComponent<Animator>();
+*/
     }
 
     // Update is called once per frame
@@ -113,7 +117,8 @@ public class Entity : MonoBehaviour
             health += (change * debuff);
             //still haven't discussed how the debuff is reset
             debuff = 1;
-        }
+/*            m_Animator.SetTrigger("getHit");
+*/        }
         //occurs if changehealth action is positive/healing (or does nothin')
         else
         {
