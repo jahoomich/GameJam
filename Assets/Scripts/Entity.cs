@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour
 {
     [SerializeField]private int id; //may go unused, but ideally, could be used to target
     [SerializeField]protected float maxhealth;
-    protected float health;
+    public float health;
     public int debuff; //should always multiply damage
 
     public GameObject mgr;
@@ -83,6 +83,12 @@ public class Entity : MonoBehaviour
 
         //do sumn?
     }
+
+    public void healArcher() 
+    { 
+        
+    }
+
 
     /*
     public void attackParty(int damage) {

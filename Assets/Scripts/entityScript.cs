@@ -26,4 +26,6 @@ public class entityScript : Entity
     public void changeDebuff() {
         Debuff(debuffTargets);
     }
+
+    
 }

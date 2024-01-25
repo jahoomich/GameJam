@@ -10,8 +10,9 @@ public class HealthBarScript : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
-    public GameObject t;
-    private Entity e;
+    public GameObject target;
+    private entityScript entityScript;
+
     public void SetMaxHealth(float health)
     {
         slider.maxValue = health;
@@ -28,12 +29,14 @@ public class HealthBarScript : MonoBehaviour
     }
     void Start()
     {
-        e = t.GetComponent<Entity>();
+        entityScript = target.GetComponent<entityScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
         /*SetHealth(t.health);*/
+        //set health to the health value of the game object provided via editor
+        SetHealth(entityScript.health);
     }
 }

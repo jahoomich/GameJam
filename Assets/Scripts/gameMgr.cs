@@ -27,6 +27,9 @@ public class gameMgr : MonoBehaviour
 
     //member for the cancel button game object
     public GameObject betrayBtn;
+    public GameObject HealKnight;
+    public GameObject HealArcher;
+
 
     public GameObject[] characters;
     public GameObject[] debuffCharacters;
@@ -51,10 +54,15 @@ public class gameMgr : MonoBehaviour
         if (memberIndex == 0)
         {
             betrayBtn.SetActive(true);
+            HealArcher.SetActive(true);
+            HealKnight.SetActive(true);
+
         }
         else 
         {
             betrayBtn.SetActive(false);
+            HealArcher.SetActive(false);
+            HealKnight.SetActive(false);
         }
       
     }
@@ -62,6 +70,18 @@ public class gameMgr : MonoBehaviour
     public void setAction(int x) 
     {
         actionType = x;
+    }
+
+    public void healArcher()
+    {
+        characters[1].GetComponent<entityScript>().ChangeHealth(10);
+        changeTurn();
+    }
+
+    public void healKnight()
+    {
+        characters[2].GetComponent<entityScript>().ChangeHealth(10);
+        changeTurn();
     }
 
     public void debuff()
@@ -80,7 +100,8 @@ public class gameMgr : MonoBehaviour
     public void increaseIndex() { 
         //set the next turn variable to true
         memberIndex ++;
-        actionType = 0;
+        
+
     }
 
     
@@ -97,7 +118,7 @@ public class gameMgr : MonoBehaviour
         {
             memberIndex++;
         }
-        actionType = 0;
+        
         
     }
 
