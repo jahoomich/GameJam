@@ -1,20 +1,21 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    
+
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 
     public IEnumerator Shake(float duration, float magnitude)
@@ -35,3 +36,7 @@ public class CameraShake : MonoBehaviour
     }
 
 }
+
+
+
+

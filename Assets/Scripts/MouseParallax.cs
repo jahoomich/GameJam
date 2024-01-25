@@ -18,16 +18,18 @@ public class MouseParallax : MonoBehaviour
         }
     }
 
-    
+
     void FixedUpdate()
     {
         float x, y;
-        x = (Input.mousePosition.x - (Screen.width / 2))*MouseSpeedX/Screen.width;
+        x = (Input.mousePosition.x - (Screen.width / 2)) * MouseSpeedX / Screen.width;
         y = (Input.mousePosition.y - (Screen.height / 2)) * MouseSpeedY / Screen.height;
 
-        for (int i = 1; i < ParallaxObjects.Length+1; i++)
+        for (int i = 1; i < ParallaxObjects.Length + 1; i++)
         {
-            ParallaxObjects[i-1].transform.position = OriginalPositions[i-1]+(new Vector3(x, y, 0f)*i*((i-1)-(ParallaxObjects.Length/2)));
+            ParallaxObjects[i - 1].transform.position = OriginalPositions[i - 1] + (new Vector3(x, y, 0f) * i * ((i - 1) - (ParallaxObjects.Length / 2)));
         }
     }
 }
+
+
