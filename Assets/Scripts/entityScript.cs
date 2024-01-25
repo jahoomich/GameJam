@@ -8,9 +8,13 @@ public class entityScript : Entity
     public GameObject[] debuffTargets;
     public string name;
 
+    Animator m_Animator; 
+   
+
     private void Start()
     {
         health = maxhealth;
+        m_Animator = gameObject.GetComponent<Animator>();
     }
 
     private void Update()
@@ -21,6 +25,8 @@ public class entityScript : Entity
     public void attackTarget()
     {
         attack(attackTargets, -5);
+        m_Animator.SetTrigger("Attack");
+
     }
 
     public void changeDebuff() {
