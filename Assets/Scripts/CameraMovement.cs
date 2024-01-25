@@ -94,7 +94,7 @@ public class CameraMovement : MonoBehaviour
         float targetSize = defaultCameraSize * zoomFactor;
         if (targetSize != currentCamera.orthographicSize)
         {
-
+            
             currentCamera.orthographicSize = Mathf.Lerp(currentCamera.orthographicSize,
     targetSize, Time.deltaTime * cameraSpeed);
             currentCamera.transform.position = Vector3.Lerp(currentCamera.transform.position, new Vector3(character.transform.position.x, character.transform.position.y, -10f), Time.deltaTime * switchSpeed);
