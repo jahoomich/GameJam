@@ -4,87 +4,57 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
-    private int dmg; //damage should be negative by default to inflict damage, positive for healing
+    public override string ToString() { return "YOU CREATED AN ACTION IDIOT"; }
+    [SerializeField] private int dmg; //damage should be negative by default to inflict damage, positive for healing
     public int Damage
     {
-        get
-        {
-            if (setup) { return dmg; }
-            Debug.Log("RUN SETUP ON ACTION FIRST");
-            return 0;
-        }
+        get { return dmg; }
     }
-    private int suspicion; //cost in suspicion, this only comes up when the wizard takes action
+
+    [SerializeField] private int suspicion; //cost in suspicion, this only comes up when the wizard takes action
     public int Suspicion
     {
-        get
-        {
-            if (setup) { return suspicion; }
-            Debug.Log("RUN SETUP ON ACTION FIRST");
-            return 0;
-        }
+        get { return suspicion; }
     }
-    private List<int> target; //who is the action targeting?
+
+    [SerializeField] private List<int> target; //who is the action targeting?
     public List<int> Targets
     {
-        get
-        {
-            if (setup) { return target; }
-            Debug.Log("RUN SETUP ON ACTION FIRST");
-            return new List<int>();
-        }
+        get { return target; }
     }
-    //1-3 = elemental types, 4 = debuff, 5 = heal
-    private int type;
-    public int AttackType
+
+    //0-2 = fire, electric, poison, 3 = neutral (for heals/party attacks)
+    [SerializeField] private int eltype;
+    public int ElementalType
     {
-        get
-        {
-            if (setup) { return type; }
-            Debug.Log("RUN SETUP ON ACTION FIRST");
-            return 0;
-        }
+        get { return eltype; }
     }
 
-    ////for custom debuff amounts?
-    ////debuff strength, debuff timer
-    //private (int, int) debuff;
-    //public (int, int) Debuff
-    //{
-    //    get
-    //    {
-    //        if (setup) { return debuff; }
-    //        Debug.Log("RUN SETUP ON ACTION FIRST");
-    //        return (0, 0);
-    //    }
-    //}
-
-    private bool setup = false;
-    
-
-    //can only be setup once
-    public void Setup(int dmg, int basesuspicion, List<int> targets, int AttackType)
+    [SerializeField] private bool isdebuff;
+    public bool IsDebuff
     {
-        if (setup == false)
-        {
-            this.dmg = dmg;
-            this.suspicion = basesuspicion;
-            this.target = targets;
-            this.type = AttackType;
-        }
-        else{ return; }
+        get { return isdebuff; }
     }
 
+    //for custom debuff amounts?
+    //debuff type, debuff timer
+    [SerializeField] private int debuffTimer;
+    private Debuff debuff;
+    public Debuff Debuff
+    {
+        get { return debuff; }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        debuff.type = eltype;
+        debuff.timer = debuffTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

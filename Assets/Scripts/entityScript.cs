@@ -8,34 +8,34 @@ public class entityScript : Entity
     public GameObject[] debuffTargets;
     public string name;
 
-    Animator m_Animator; 
+    Animator manimator; 
    
 
     private void Start()
     {
-        health = maxhealth;
-        m_Animator = gameObject.GetComponent<Animator>();
+        //health = maxhealth;
+        manimator = gameObject.GetComponent<Animator>();
     }
 
     private void Update()
     {
-        Debug.Log(name + "health is: " + health);
+        //Debug.Log(name + "health is: " + health);
 
-        if (health <= 0)
-        {
-            m_Animator.SetTrigger("Dead");
-        }
+        //if (health <= 0)
+        //{
+        //    manimator.SetTrigger("Dead");
+        //}
     }
 
     public void attackTarget()
     {
-        attack(attackTargets, -5);
-        m_Animator.SetTrigger("Attack");
+        //attack(attackTargets, -5);
+        manimator.SetTrigger("Attack");
 
     }
 
     public void changeDebuff() {
-        Debuff(debuffTargets);
+        //Debuff(debuffTargets);
 
     }
 }
