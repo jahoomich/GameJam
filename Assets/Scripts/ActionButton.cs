@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ActionButton : MonoBehaviour
 {
+    public AudioSource audioSource;
+
     //int dmg, int basesuspicion, List<int> targets, int element = 4, bool debuff = false, int debufftimer = 0
     //[SerializeField] private int damage;
     //[SerializeField] private int suspicion;
@@ -32,5 +34,7 @@ public class ActionButton : MonoBehaviour
         Debug.Log(string.Format("CREATING ACTION COPY: {0}", action));
         gamemanager.NewAction = this.action;
         gamemanager.ExecuteTurn();
+        audioSource.Play();
+
     }
 }

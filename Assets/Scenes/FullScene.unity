@@ -1038,17 +1038,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 314856202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d17940c219118143995d6924888ce1d, type: 3}
+  m_Script: {fileID: 11500000, guid: e848422bc47d4d9489cad905e3ceb05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
   maxhealth: 100
-  attackTargets:
-  - {fileID: 1926039713}
-  debuffTargets:
-  - {fileID: 1800781249}
-  - {fileID: 1717376535}
-  name: Wizard
 --- !u!1 &323317232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,6 +2457,8 @@ GameObject:
   - component: {fileID: 643541914}
   - component: {fileID: 643541913}
   - component: {fileID: 643541912}
+  - component: {fileID: 643541916}
+  - component: {fileID: 643541915}
   m_Layer: 5
   m_Name: AttackBoss
   m_TagString: Untagged
@@ -2596,6 +2592,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643541910}
   m_CullTransparentMesh: 1
+--- !u!114 &643541915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643541910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab001edd88fc3c6428b2063e28de06a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 50
+  suspicion: -10
+  target: 
+  eltype: 0
+  isdebuff: 0
+  debuffTimer: 0
+--- !u!114 &643541916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643541910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &652061581
 GameObject:
   m_ObjectHideFlags: 0
@@ -11320,15 +11346,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1717376535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d17940c219118143995d6924888ce1d, type: 3}
+  m_Script: {fileID: 11500000, guid: e848422bc47d4d9489cad905e3ceb05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
   maxhealth: 100
-  attackTargets:
-  - {fileID: 1926039713}
-  debuffTargets: []
-  name: Knight
 --- !u!1 &1739083681
 GameObject:
   m_ObjectHideFlags: 0
@@ -11496,15 +11518,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1800781249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d17940c219118143995d6924888ce1d, type: 3}
+  m_Script: {fileID: 11500000, guid: e848422bc47d4d9489cad905e3ceb05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
   maxhealth: 100
-  attackTargets:
-  - {fileID: 1926039713}
-  debuffTargets: []
-  name: Archer
 --- !u!1 &1926039713 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6702078893330260196, guid: d53be0a77a8dbdc45997bea13a182cad, type: 3}
@@ -11597,17 +11615,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1926039713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d17940c219118143995d6924888ce1d, type: 3}
+  m_Script: {fileID: 11500000, guid: e848422bc47d4d9489cad905e3ceb05c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
   maxhealth: 100
-  attackTargets:
-  - {fileID: 1800781249}
-  - {fileID: 1717376535}
-  - {fileID: 314856202}
-  debuffTargets: []
-  name: Boss
 --- !u!1 &1930725518
 GameObject:
   m_ObjectHideFlags: 0
