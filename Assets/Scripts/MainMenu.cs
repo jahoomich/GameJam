@@ -7,6 +7,6 @@ public class Mainmenu : MonoBehaviour
 {
     public void startGame()
     {
-        SceneManager.LoadScene("FullScene");
+        SceneManager.LoadScene("NEWSCENE");
     }
 }
