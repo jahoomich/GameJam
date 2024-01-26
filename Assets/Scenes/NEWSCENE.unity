@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 30
-  suspicion: 0
+  suspicion: -10
   target: 02000000
   eltype: 0
   isdebuff: 0
@@ -2262,7 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: -30
-  suspicion: 0
+  suspicion: -5
   target: 03000000
   eltype: 0
   isdebuff: 0
@@ -2754,7 +2754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 30
-  suspicion: 0
+  suspicion: -10
   target: 01000000
   eltype: 0
   isdebuff: 0
@@ -9134,7 +9134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 0
-  suspicion: 0
+  suspicion: 5
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
@@ -9869,6 +9869,7 @@ MonoBehaviour:
   - {fileID: 6702078893700298420}
   teammateaction: {fileID: 1450576497}
   bossaction: {fileID: 1450576496}
+  suspicionBar: {fileID: 2037714622}
 --- !u!114 &1450576496
 MonoBehaviour:
   m_ObjectHideFlags: 0

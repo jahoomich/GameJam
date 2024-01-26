@@ -5,6 +5,6 @@ using UnityEngine.SceneManagement;
 public class gameOverScreen : MonoBehaviour {
 
     public void RestartButton() {
-        SceneManager.LoadScene("FullScene");
+        SceneManager.LoadScene("NEWSCENE");
     }
 }

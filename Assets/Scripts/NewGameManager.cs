@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class newGameManager : MonoBehaviour
 {
     //must be added in order
@@ -11,8 +12,9 @@ public class newGameManager : MonoBehaviour
     private int activeChar;
     private string[] charNames = { "Wizard", "Archer", "Knight", "Boss" };
     private Action action;
-    [SerializeField]private Action teammateaction;
+    [SerializeField] private Action teammateaction;
     [SerializeField] private Action bossaction;
+    [SerializeField] private SusBar suspicionBar;
     public Action NewAction
     {
         set { action = value; }
@@ -40,11 +42,11 @@ public class newGameManager : MonoBehaviour
         action = null;
         if (winCondition())
         {
-            // do something
+            SceneManager.LoadScene("Win");
         }
         if (loseCondition())
         {
-            //do something    
+            SceneManager.LoadScene("GameOverScene");
         }
         changeturn();
         if (activeChar != 0) { ExecuteTurn(); }
@@ -58,6 +60,7 @@ public class newGameManager : MonoBehaviour
             characters[target].ChangeHealth(action.Damage);
             characters[target].AddDebuff(action.Debuff);
         }
+        suspicionBar.SetSus(action.Suspicion);
         //add suspicion
         //apply debuffs
         //consider elemental debuffs
