@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 156637099}
   - component: {fileID: 156637098}
   - component: {fileID: 156637101}
+  - component: {fileID: 156637102}
   m_Layer: 5
   m_Name: healKnight
   m_TagString: Untagged
@@ -497,6 +498,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &156637102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156637096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab001edd88fc3c6428b2063e28de06a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 30
+  suspicion: 0
+  target: 02000000
+  eltype: 0
+  isdebuff: 0
+  debuffTimer: 0
 --- !u!1 &189844143
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,7 +2263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: -30
   suspicion: 0
-  target: 00000000010000000200000003000000
+  target: 03000000
   eltype: 0
   isdebuff: 0
   debuffTimer: 0
@@ -2587,6 +2606,7 @@ GameObject:
   - component: {fileID: 820784735}
   - component: {fileID: 820784734}
   - component: {fileID: 820784737}
+  - component: {fileID: 820784738}
   m_Layer: 5
   m_Name: healArcher
   m_TagString: Untagged
@@ -2721,6 +2741,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &820784738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820784732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab001edd88fc3c6428b2063e28de06a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 30
+  suspicion: 0
+  target: 01000000
+  eltype: 0
+  isdebuff: 0
+  debuffTimer: 0
 --- !u!1 &878291427
 GameObject:
   m_ObjectHideFlags: 0
@@ -8948,6 +8986,7 @@ GameObject:
   - component: {fileID: 1439274304}
   - component: {fileID: 1439274303}
   - component: {fileID: 1439274306}
+  - component: {fileID: 1439274307}
   m_Layer: 5
   m_Name: BetrayParty
   m_TagString: Untagged
@@ -9082,6 +9121,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1439274307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439274301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab001edd88fc3c6428b2063e28de06a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 0
+  suspicion: 0
+  target: 0100000002000000
+  eltype: 3
+  isdebuff: 1
+  debuffTimer: 2
 --- !u!1001 &1450576488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9781,6 +9838,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1128596605699189966, guid: 50d5db90c47d92740bd2c411f2e5f0de, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1450576493}
+    - targetCorrespondingSourceObject: {fileID: 1128596605699189966, guid: 50d5db90c47d92740bd2c411f2e5f0de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1450576497}
+    - targetCorrespondingSourceObject: {fileID: 1128596605699189966, guid: 50d5db90c47d92740bd2c411f2e5f0de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1450576496}
   m_SourcePrefab: {fileID: 100100000, guid: 50d5db90c47d92740bd2c411f2e5f0de, type: 3}
 --- !u!1 &1450576490 stripped
 GameObject:
@@ -9804,6 +9867,44 @@ MonoBehaviour:
   - {fileID: 1408169009222235002}
   - {fileID: 7644786847066662470}
   - {fileID: 6702078893700298420}
+  teammateaction: {fileID: 1450576497}
+  bossaction: {fileID: 1450576496}
+--- !u!114 &1450576496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450576490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab001edd88fc3c6428b2063e28de06a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: -20
+  suspicion: 0
+  target: 000000000100000002000000
+  eltype: 0
+  isdebuff: 0
+  debuffTimer: 0
+--- !u!114 &1450576497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450576490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab001edd88fc3c6428b2063e28de06a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: -20
+  suspicion: 0
+  target: 03000000
+  eltype: 0
+  isdebuff: 0
+  debuffTimer: 0
 --- !u!1 &1455192394
 GameObject:
   m_ObjectHideFlags: 0
@@ -10924,7 +11025,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   maxhealth: 100
-  health: 0
 --- !u!114 &1408169009222235002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10939,7 +11039,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   maxhealth: 100
-  health: 0
 --- !u!1 &1954407194563601786
 GameObject:
   m_ObjectHideFlags: 0
@@ -11042,7 +11141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   maxhealth: 300
-  health: 0
 --- !u!1 &7644786847066662469
 GameObject:
   m_ObjectHideFlags: 0
@@ -11076,4 +11174,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   maxhealth: 100
-  health: 0

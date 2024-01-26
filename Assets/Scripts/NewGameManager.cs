@@ -11,6 +11,8 @@ public class newGameManager : MonoBehaviour
     private int activeChar;
     private string[] charNames = { "Wizard", "Archer", "Knight", "Boss" };
     private Action action;
+    [SerializeField]private Action teammateaction;
+    [SerializeField] private Action bossaction;
     public Action NewAction
     {
         set { action = value; }
@@ -23,12 +25,15 @@ public class newGameManager : MonoBehaviour
     }
     void Update()
     {
-
     }
 
     public void ExecuteTurn()
     {
         Debug.Log(string.Format("{0} turn", charNames[activeChar]));
+        if (activeChar != 0) 
+        {
+            npcAction();
+        }
         debufftick();
         executeaction();
         checkChars();
@@ -42,6 +47,7 @@ public class newGameManager : MonoBehaviour
             //do something    
         }
         changeturn();
+        if (activeChar != 0) { ExecuteTurn(); }
     }
 
     private void executeaction()
@@ -50,6 +56,7 @@ public class newGameManager : MonoBehaviour
         foreach (int target in action.Targets)
         {
             characters[target].ChangeHealth(action.Damage);
+            characters[target].AddDebuff(action.Debuff);
         }
         //add suspicion
         //apply debuffs
@@ -74,6 +81,13 @@ public class newGameManager : MonoBehaviour
         }
     }
 
+    private void npcAction()
+    {
+        if (activeChar == 1 || activeChar == 2)
+        { action = teammateaction; }
+        if (activeChar == 3)
+        { action = bossaction; }
+    }
 
     //method to check if both archer and knight have died
     public bool winCondition()

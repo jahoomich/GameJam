@@ -63,6 +63,15 @@ public class Entity : MonoBehaviour
     public void ChangeHealth(int change)
     {
         Debug.Log(string.Format("Changehealth called {0}", change));
+        foreach (Debuff debuff in debufflist)
+        {
+            if (debuff.type == 3 && change < 0)
+            {
+                change *= 2;
+            }
+            debuff.TickDown();
+        }
+
         //branch if changehealth action is negative/damaging
         if (change < 0)
         {
@@ -74,11 +83,23 @@ public class Entity : MonoBehaviour
             health += change;
             if (health > maxhealth) { health = maxhealth; }
         }
+        removedebuff();
     }
 
     public void AddDebuff(Debuff newdebuff)
     {
         debufflist.Add(newdebuff);
+    }
+
+    private void removedebuff()
+    {
+        List<Debuff> newlist = new List<Debuff>();
+        foreach (Debuff debuff in debufflist)
+        {
+            if (debuff.timer != 0)
+            { newlist.Add(debuff); }
+        }
+        debufflist = newlist;
     }
 
     public void ChangeSprite(int spriteIndex)
