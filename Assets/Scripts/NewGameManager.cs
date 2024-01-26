@@ -15,6 +15,7 @@ public class newGameManager : MonoBehaviour
     [SerializeField] private Action teammateaction;
     [SerializeField] private Action bossaction;
     [SerializeField] private SusBar suspicionBar;
+    [SerializeField] private NotifManager notifManager;
     public Action NewAction
     {
         set { action = value; }
@@ -36,7 +37,7 @@ public class newGameManager : MonoBehaviour
         {
             npcAction();
         }
-        debufftick();
+        //debufftick();
         executeaction();
         checkChars();
         action = null;
@@ -61,25 +62,34 @@ public class newGameManager : MonoBehaviour
             characters[target].AddDebuff(action.Debuff);
         }
         suspicionBar.SetSus(action.Suspicion);
-        //add suspicion
-        //apply debuffs
         //consider elemental debuffs
     }
 
-    private void debufftick()
-    {
-        //apply any effects (Damage over time) of debuffs
-    }
+    //private void debufftick()
+    //{
+    //    //apply any effects (Damage over time) of debuffs
+    //}
 
     private void checkChars()
     {
-        foreach (Entity character in characters) 
+        for (int i = 0; i < characters.Length; i++) 
         {
+            Entity character = characters[i];
             if (character.Alive == false)
             {
                 Debug.Log(string.Format("CHARACTER IS DEAD PROBABLY, {0}",character.Alive));
                 character.ChangeSprite(2); 
                 //character is dead, do something
+            }
+            if (character.Debuffed)
+            {
+                Debug.Log("CALL MOTHERFUCKER");
+                notifManager.SetActive(i);
+            }
+            else if (character.Debuffed == false)
+            {
+                Debug.Log("feoijoijoij");
+                notifManager.SetInactive(i);
             }
         }
     }

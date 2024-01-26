@@ -18,7 +18,7 @@ public class Entity : MonoBehaviour
         get
         {
             //Debug.Log(string.Format("Health getter called: {0}", health));
-            return health; 
+            return health;
         }
     }
     private List<Debuff> debufflist = new List<Debuff>();
@@ -30,19 +30,23 @@ public class Entity : MonoBehaviour
     {
         get
         {
-            if (health > 0) 
+            if (health > 0)
             {
                 Debug.Log("character is alive lol");
                 Debug.Log(string.Format("Health, maxhealth, {0}, {1}", health, maxhealth));
-                return true; 
+                return true;
             }
             else { return false; }
         }
     }
 
-    public bool ID
+    public bool Debuffed
     {
-        get { return ID; }
+        get
+        {
+            if (debufflist.Count > 0) { return true; }
+            else { return false; }
+        }
     }
 
     // Start is called before the first frame update

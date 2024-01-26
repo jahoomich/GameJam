@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/FullScene.unity
+    guid: 80bf4bdf846f5dd4cb4e6b72aae7e3af
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: c0911d527be9c5b45b35de6fb4d85e4c
   - enabled: 1
-    path: Assets/Scenes/FullScene.unity
-    guid: 80bf4bdf846f5dd4cb4e6b72aae7e3af
+    path: Assets/Scenes/NEWSCENE.unity
+    guid: ec0b3c3239978e64ab9c61ed9bf3c4d1
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: ca2eb7f03cce359449c8aed9f6dfa5f2
