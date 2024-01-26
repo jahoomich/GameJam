@@ -59,7 +59,10 @@ public class newGameManager : MonoBehaviour
         foreach (int target in action.Targets)
         {
             characters[target].ChangeHealth(action.Damage);
-            characters[target].AddDebuff(action.Debuff);
+            if (action.IsDebuff)
+            {
+                characters[target].AddDebuff(action.Debuff);
+            }
         }
         suspicionBar.SetSus(action.Suspicion);
         //consider elemental debuffs
