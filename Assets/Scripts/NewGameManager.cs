@@ -46,6 +46,7 @@ public class newGameManager : MonoBehaviour
 
     private void executeaction()
     {
+        characters[activeChar].ChangeSprite(1);
         foreach (int target in action.Targets)
         {
             characters[target].ChangeHealth(action.Damage);
@@ -65,8 +66,9 @@ public class newGameManager : MonoBehaviour
         foreach (Entity character in characters) 
         {
             if (character.Alive == false)
-            { 
-                character.ChangeSprite(1); 
+            {
+                Debug.Log(string.Format("CHARACTER IS DEAD PROBABLY, {0}",character.Alive));
+                character.ChangeSprite(2); 
                 //character is dead, do something
             }
         }
