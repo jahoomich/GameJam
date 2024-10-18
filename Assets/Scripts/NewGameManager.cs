@@ -140,4 +140,8 @@ public class newGameManager : MonoBehaviour
             ExecuteTurn(); 
         }
     }
+    //active char getter
+    public int currentChar{
+        get { return activeChar; }
+    }
 }
