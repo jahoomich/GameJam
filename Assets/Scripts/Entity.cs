@@ -120,6 +120,7 @@ public class Entity : MonoBehaviour
                 Debug.Log("Death animation called");
                 m_Animator.SetTrigger("Dead");
                 break;
+                //hello my friend
         }
     }
 }
