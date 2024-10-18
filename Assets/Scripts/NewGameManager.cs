@@ -74,6 +74,7 @@ public class newGameManager : MonoBehaviour
             }
         }
         suspicionBar.SetSus(action.Suspicion);
+        Debug.Log("testing testing");
 
         /*actionsNotif.Setup(1, 0);*/
         //consider elemental debuffs
