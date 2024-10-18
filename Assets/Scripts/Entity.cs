@@ -64,14 +64,14 @@ public class Entity : MonoBehaviour
 
     //if change > 0, action is healing,
     //if change < 0, action is damaging
-    public void ChangeHealth(int change)
+    public void ChangeHealth(float change)
     {
         Debug.Log(string.Format("Changehealth called {0}", change));
         foreach (Debuff debuff in debufflist)
         {
             if (debuff.type == 3 && change < 0)
             {
-                change *= 2;
+                change *= 1.5f;
             }
             debuff.TickDown();
         }
