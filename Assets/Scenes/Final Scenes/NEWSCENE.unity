@@ -11920,7 +11920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fafb8431d2f1de647a88689c4814a447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantity: 0
+  quantity: 5
   dmgcolour: {r: 0.32444292, g: 0.95520544, b: 0.96603775, a: 0.5568628}
   healcolour: {r: 0.2, g: 0.8, b: 0.2, a: 0.5}
   debuffcolor: {r: 0.8, g: 0.8, b: 0.2, a: 0.5}
