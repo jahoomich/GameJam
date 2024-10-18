@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Notification : MonoBehaviour
 {
     //for damage, heal and suspicion, gets added to message
-    public int quantity; 
-    Text text;
+    public int quantity;
+    public TMP_Text text;
     
     [SerializeField] private Color dmgcolour = new Vector4(0.8f, 0.2f, 0.2f, 0.5f);
     [SerializeField] private Color healcolour = new Vector4(0.2f, 0.8f, 0.2f, 0.5f);
@@ -31,18 +32,19 @@ public class Notification : MonoBehaviour
     //msg types: 0 = dmg, 1 = heal, 2 = debuff, 3 = suspicion meter
     public void Setup(int msgtype, int quantity)
     {
-        text = GetComponentInParent<Text>();
-        text.color = new Vector4(0f, 0f, 0f, 0f);
+        /*text = GetComponentInParent<Text>();*/
+        text.color = new Vector4(255f, 255f, 255f, 255f);
+
         switch (msgtype)
         {
             default:
             case 0:
                 switchcolor = dmgcolour;
-                text.text = string.Format("{0} {1}",quantity,dmgmessage);
+                text.text = string.Format("{0} {1}", quantity, dmgmessage);
                 break;
             case 1:
                 switchcolor = healcolour;
-                text.text = string.Format("+{0} {1}",quantity,dmgmessage);
+                text.text = string.Format("+{0} {1}", quantity, dmgmessage);
                 break;
             case 2:
                 switchcolor = debuffcolor;
@@ -50,7 +52,7 @@ public class Notification : MonoBehaviour
                 break;
             case 3:
                 switchcolor = suspicioncolor;
-                text.text = string.Format("+{0} {1}",quantity,suspicioncolor);
+                text.text = string.Format("+{0} {1}", quantity, suspicioncolor);
                 break;
         }
     }
