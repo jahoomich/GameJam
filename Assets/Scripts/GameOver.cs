@@ -7,4 +7,9 @@ public class gameOverScreen : MonoBehaviour {
     public void RestartButton() {
         SceneManager.LoadScene("NEWSCENE");
     }
+
+    public void BackToMenuButton()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
 }
