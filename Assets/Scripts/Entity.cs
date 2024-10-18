@@ -121,6 +121,7 @@ public class Entity : MonoBehaviour
                 m_Animator.SetTrigger("Dead");
                 break;
                 //hello my friend
+                //something silly
         }
     }
 }
