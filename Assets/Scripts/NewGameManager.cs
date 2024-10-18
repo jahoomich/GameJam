@@ -12,6 +12,7 @@ public class newGameManager : MonoBehaviour
     private int activeChar;
     private string[] charNames = { "Wizard", "Archer", "Knight", "Boss" };
     private Action action;
+    [SerializeField] private float seconds;
     [SerializeField] private Action teammateaction;
     [SerializeField] private Action bossaction;
     [SerializeField] private SusBar suspicionBar;
@@ -33,7 +34,8 @@ public class newGameManager : MonoBehaviour
     public void ExecuteTurn()
     {
         Debug.Log(string.Format("{0} turn", charNames[activeChar]));
-        if (activeChar != 0) 
+        //add condition here to slow actions down
+        if (activeChar != 0)
         {
             npcAction();
         }
@@ -49,8 +51,11 @@ public class newGameManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameOverScene");
         }
-        changeturn();
-        if (activeChar != 0) { ExecuteTurn(); }
+        StartCoroutine(changeturn());
+        // if (activeChar != 0) { 
+        //     ExecuteTurn(); 
+        //     Debug.Log("confused.com");
+        // }
     }
 
     private void executeaction()
@@ -75,23 +80,23 @@ public class newGameManager : MonoBehaviour
 
     private void checkChars()
     {
-        for (int i = 0; i < characters.Length; i++) 
+        for (int i = 0; i < characters.Length; i++)
         {
             Entity character = characters[i];
             if (character.Alive == false)
             {
-                Debug.Log(string.Format("CHARACTER IS DEAD PROBABLY, {0}",character.Alive));
-                character.ChangeSprite(2); 
+                //Debug.Log(string.Format("CHARACTER IS DEAD PROBABLY, {0}", character.Alive));
+                character.ChangeSprite(2);
                 //character is dead, do something
             }
             if (character.Debuffed)
             {
-                Debug.Log("CALL MOTHERFUCKER");
+                //Debug.Log("CALL MOTHERFUCKER");
                 notifManager.SetActive(i);
             }
             else if (character.Debuffed == false)
             {
-                Debug.Log("feoijoijoij");
+                //Debug.Log("feoijoijoij");
                 notifManager.SetInactive(i);
             }
         }
@@ -99,10 +104,13 @@ public class newGameManager : MonoBehaviour
 
     private void npcAction()
     {
-        if (activeChar == 1 || activeChar == 2)
-        { action = teammateaction; }
-        if (activeChar == 3)
-        { action = bossaction; }
+        if (activeChar == 1 || activeChar == 2) { 
+            Debug.Log("Confused.com");
+            action = teammateaction; 
+        }
+        if (activeChar == 3) { 
+            action = bossaction; 
+        }
     }
 
     //method to check if both archer and knight have died
@@ -121,9 +129,15 @@ public class newGameManager : MonoBehaviour
         return false;
     }
 
-    private void changeturn()
+    IEnumerator changeturn()
     {
-        if (activeChar == 3) { activeChar = 0; }
-        else { activeChar++; }
+        if (activeChar == 3) { 
+            activeChar = 0;
+        }
+        else { 
+            activeChar++;
+            yield return new WaitForSeconds(seconds);
+            ExecuteTurn(); 
+        }
     }
 }
