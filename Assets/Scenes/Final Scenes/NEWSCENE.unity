@@ -665,6 +665,8 @@ MonoBehaviour:
   target: 02000000
   eltype: 0
   isdebuff: 0
+  isheal: 0
+  isattack: 0
   debuffTimer: 0
 --- !u!1 &189844143
 GameObject:
@@ -2720,6 +2722,8 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
+  isheal: 0
+  isattack: 0
   debuffTimer: 0
 --- !u!1 &652061581
 GameObject:
@@ -3211,6 +3215,8 @@ MonoBehaviour:
   target: 01000000
   eltype: 0
   isdebuff: 0
+  isheal: 0
+  isattack: 0
   debuffTimer: 0
 --- !u!1 &878291427
 GameObject:
@@ -9805,6 +9811,8 @@ MonoBehaviour:
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
+  isheal: 0
+  isattack: 0
   debuffTimer: 2
 --- !u!1001 &1450576488
 PrefabInstance:
@@ -10564,6 +10572,8 @@ MonoBehaviour:
   target: 000000000100000002000000
   eltype: 0
   isdebuff: 0
+  isheal: 0
+  isattack: 0
   debuffTimer: 0
 --- !u!114 &1450576497
 MonoBehaviour:
@@ -10583,6 +10593,8 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
+  isheal: 0
+  isattack: 0
   debuffTimer: 0
 --- !u!1 &1455192394
 GameObject:
@@ -10879,7 +10891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nothing is Happening
+  m_text: Nothing Is Happening
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
