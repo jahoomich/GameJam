@@ -17,6 +17,8 @@ public class newGameManager : MonoBehaviour
     [SerializeField] private Action bossaction;
     [SerializeField] private SusBar suspicionBar;
     [SerializeField] private NotifManager notifManager;
+
+    [SerializeField] private Notification actionNotif;
     public Action NewAction
     {
         set { action = value; }
@@ -67,6 +69,8 @@ public class newGameManager : MonoBehaviour
             if (action.IsDebuff)
             {
                 characters[target].AddDebuff(action.Debuff);
+                Debug.Log("meow");
+                actionNotif.Setup(2, 0);
             }
         }
         suspicionBar.SetSus(action.Suspicion);
