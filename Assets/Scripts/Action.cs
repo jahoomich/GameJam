@@ -37,6 +37,18 @@ public class Action : MonoBehaviour
         get { return isdebuff; }
     }
 
+    [SerializeField] private bool isheal;
+    public bool IsHeal
+    {
+        get { return isheal; }
+    }
+
+    [SerializeField] private bool isattack;
+    public bool IsAttack
+    {
+        get { return isattack; }
+    }
+
     //for custom debuff amounts?
     //debuff type, debuff timer
     [SerializeField] private int debuffTimer;

@@ -69,9 +69,24 @@ public class newGameManager : MonoBehaviour
             if (action.IsDebuff)
             {
                 characters[target].AddDebuff(action.Debuff);
-                Debug.Log("meow");
+                Debug.Log("debuf !");
                 actionNotif.Setup(2, 0);
             }
+
+            if (action.IsHeal)
+            {
+                Debug.Log("heal !");
+                actionNotif.Setup(1, 0);
+            }
+
+
+            if (action.IsAttack)
+            {
+                Debug.Log("attack !");
+                actionNotif.Setup(0, 0);
+            }
+
+
         }
         suspicionBar.SetSus(action.Suspicion);
         //consider elemental debuffs
