@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class Entity : MonoBehaviour
 {
     [SerializeField] private int id; //may go unused, but ideally, could be used to target
+    public GameObject damageEffects;
+    public TMP_Text text;
+    [SerializeField] private Color32 dmgcolour = new Color32(255,0,0,255);
+    [SerializeField] private Color32 healcolour = new Color32(0,255,0,255);
+    [SerializeField] private Color32 poisoncolour = new Color32(64,6,144,255);
+    public bool changing = false;
+    public float timex = 0;
+    [SerializeField] private string changeVal = "";
     public int CharID
     {
         get { return id; }
@@ -60,6 +69,14 @@ public class Entity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(changing == true){
+            timex += Time.deltaTime;
+            if(timex > 0.33f){
+                damageEffects.SetActive(false);
+                timex = 0;
+                changing = false;
+            }
+        }
     }
 
     //if change > 0, action is healing,
@@ -72,6 +89,9 @@ public class Entity : MonoBehaviour
             if (debuff.type == 3 && change < 0)
             {
                 change *= 1.5f;
+                updateVal(change, poisoncolour);
+                damageEffects.SetActive(true);
+                changing = true;
             }
             debuff.TickDown();
         }
@@ -80,11 +100,18 @@ public class Entity : MonoBehaviour
         if (change < 0)
         {
             health += (change);
+            updateVal(change, dmgcolour);
+            damageEffects.SetActive(true);
+            changing = true;
+            //damageEffects.SetActive(false);
         }
         //occurs if changehealth action is positive/healing (or does nothin')
         else
         {
             health += change;
+            updateVal(change, healcolour);
+            damageEffects.SetActive(true);
+            changing = true;
             if (health > maxhealth) { health = maxhealth; }
         }
         removedebuff();
@@ -123,5 +150,10 @@ public class Entity : MonoBehaviour
                 //hello my friend
                 //something silly
         }
+    }
+    void updateVal(float change, Color32 colour){
+        changeVal = string.Format("{0:N0}", change);
+        text.color = colour;
+        text.text = string.Format("{0} {1}", changeVal, "");
     }
 }
