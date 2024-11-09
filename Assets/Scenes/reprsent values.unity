@@ -13160,6 +13160,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4287628864
   changing: 0
+  damageAniTime: 0.33
   timex: 0
   changeVal: 
   maxhealth: 100
@@ -13188,6 +13189,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4287628864
   changing: 0
+  damageAniTime: 0.33
   timex: 0
   changeVal: 
   maxhealth: 100
@@ -13304,6 +13306,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4287628864
   changing: 0
+  damageAniTime: 0.33
   timex: 0
   changeVal: 
   maxhealth: 250
@@ -13351,6 +13354,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4287628864
   changing: 0
+  damageAniTime: 0.33
   timex: 0
   changeVal: 
   maxhealth: 200

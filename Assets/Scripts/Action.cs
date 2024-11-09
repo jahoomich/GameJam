@@ -5,7 +5,7 @@ using UnityEngine;
 public class Action : MonoBehaviour
 {
     public AudioSource audioSource;
-    public override string ToString() { return "YOU CREATED AN ACTION IDIOT"; }
+    public override string ToString() { return ""; }
     [SerializeField] private int dmg; //damage should be negative by default to inflict damage, positive for healing
     public int Damage
     {

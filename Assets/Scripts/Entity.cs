@@ -14,6 +14,7 @@ public class Entity : MonoBehaviour
     [SerializeField] private Color32 healcolour = new Color32(0,255,0,255);
     [SerializeField] private Color32 poisoncolour = new Color32(64,6,144,255);
     public bool changing = false;
+    [SerializeField] private float damageAniTime;
     public float timex = 0;
     [SerializeField] private string changeVal = "";
     public int CharID
@@ -41,7 +42,7 @@ public class Entity : MonoBehaviour
         {
             if (health > 0)
             {
-                Debug.Log("character is alive lol");
+                //Debug.Log("character is alive lol");
                 Debug.Log(string.Format("Health, maxhealth, {0}, {1}", health, maxhealth));
                 return true;
             }
@@ -71,7 +72,7 @@ public class Entity : MonoBehaviour
     {
         if(changing == true){
             timex += Time.deltaTime;
-            if(timex > 0.33f){
+            if(timex > damageAniTime){
                 damageEffects.SetActive(false);
                 timex = 0;
                 changing = false;
@@ -84,15 +85,30 @@ public class Entity : MonoBehaviour
     public void ChangeHealth(float change)
     {
         Debug.Log(string.Format("Changehealth called {0}", change));
+        //here also for new debuff types
         foreach (Debuff debuff in debufflist)
         {
-            if (debuff.type == 3 && change < 0)
-            {
-                change *= 1.5f;
-                updateVal(change, poisoncolour);
-                damageEffects.SetActive(true);
-                changing = true;
+            switch(debuff.type){ //types of debuffs
+                case 1: //fire
+                    break;
+                case 2: //static
+                    break;
+                case 3: //poisen
+                    if(change < 0){
+                        change *= 1.5f;
+                        updateVal(change, poisoncolour);
+                        damageEffects.SetActive(true);
+                        changing = true;
+                    }
+                    break;
             }
+            // if (debuff.type == 3 && change < 0)
+            // {
+            //     change *= 1.5f;
+            //     updateVal(change, poisoncolour);
+            //     damageEffects.SetActive(true);
+            //     changing = true;
+            // }
             debuff.TickDown();
         }
 
@@ -128,9 +144,12 @@ public class Entity : MonoBehaviour
         foreach (Debuff debuff in debufflist)
         {
             if (debuff.timer != 0)
-            { newlist.Add(debuff); }
+            { 
+                newlist.Add(debuff); 
+            }
         }
         debufflist = newlist;
+        //Debug.Log(debufflist);
     }
 
     public void ChangeSprite(int spriteIndex)

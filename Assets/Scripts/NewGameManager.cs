@@ -60,6 +60,7 @@ public class newGameManager : MonoBehaviour
         // }
     }
 
+    //create new debuffs here ---
     private void executeaction()
     {
         characters[activeChar].ChangeSprite(1);
@@ -115,7 +116,7 @@ public class newGameManager : MonoBehaviour
             }
             else if (character.Debuffed == false)
             {
-                //Debug.Log("feoijoijoij");
+                //Debug.Log("working");
                 notifManager.SetInactive(i);
             }
         }
@@ -124,7 +125,7 @@ public class newGameManager : MonoBehaviour
     private void npcAction()
     {
         if (activeChar == 1 || activeChar == 2) { 
-            Debug.Log("Confused.com");
+            //Debug.Log("Confused.com");
             action = teammateaction; 
         }
         if (activeChar == 3) { 

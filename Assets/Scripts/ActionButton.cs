@@ -31,7 +31,7 @@ public class ActionButton : MonoBehaviour
 
     public void CreateAction()
     {
-        Debug.Log(string.Format("CREATING ACTION COPY: {0}", action));
+        //Debug.Log(string.Format("CREATING ACTION COPY: {0}", action));
         if(gamemanager.currentChar == 0){
             gamemanager.NewAction = this.action;
             gamemanager.ExecuteTurn();

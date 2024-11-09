@@ -43,7 +43,9 @@ public class HealthBarScript : MonoBehaviour
         updateHealthVal(entity.Health);
     }
     void updateHealthVal(float health){
-        healthVal = string.Format("{0:N0}", health);
-        text.text = string.Format("{0} {1}", healthVal, "");
+        if(health>0){
+            healthVal = string.Format("{0:N0}", health);
+            text.text = string.Format("{0} {1}", healthVal, "");
+        }
     }
 }
