@@ -36,6 +36,16 @@ public class Action : MonoBehaviour
     {
         get { return isdebuff; }
     }
+    [SerializeField] private bool IsStatic;
+    //istatic getter
+    public bool isStatic{
+        get{
+            return IsStatic;
+        }
+        set{
+            IsStatic = value;
+        }
+    }
 
     [SerializeField] private bool isheal;
     public bool IsHeal

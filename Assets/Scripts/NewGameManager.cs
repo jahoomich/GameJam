@@ -124,7 +124,7 @@ public class newGameManager : MonoBehaviour
 
     private void npcAction()
     {
-        if (activeChar == 1 || activeChar == 2) { 
+        if (activeChar == 1 || activeChar == 2 && action.isStatic == false) { 
             //Debug.Log("Confused.com");
             action = teammateaction; 
         }
@@ -162,6 +162,8 @@ public class newGameManager : MonoBehaviour
     }
     //active char getter
     public int currentChar{
-        get { return activeChar; }
+        get { 
+            return activeChar; 
+        }
     }
 }

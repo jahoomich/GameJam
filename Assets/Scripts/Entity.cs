@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
     [SerializeField] private int id; //may go unused, but ideally, could be used to target
     public GameObject damageEffects;
     public TMP_Text text;
+    private Action action;
     [SerializeField] private Color32 dmgcolour = new Color32(255,0,0,255);
     [SerializeField] private Color32 healcolour = new Color32(0,255,0,255);
     [SerializeField] private Color32 poisoncolour = new Color32(64,6,144,255);
@@ -92,6 +93,8 @@ public class Entity : MonoBehaviour
                 case 1: //fire
                     break;
                 case 2: //static
+                    //update a bool here IsStatic
+                    action.isStatic = true;
                     break;
                 case 3: //poisen
                     if(change < 0){
