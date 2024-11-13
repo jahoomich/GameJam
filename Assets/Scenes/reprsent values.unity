@@ -13165,6 +13165,12 @@ MonoBehaviour:
   poisoncolour:
     serializedVersion: 2
     rgba: 4287628864
+  firecolour:
+    serializedVersion: 2
+    rgba: 4278232575
+  staticcolour:
+    serializedVersion: 2
+    rgba: 4278255615
   changing: 0
   damageAniTime: 0.33
   timex: 0
@@ -13194,6 +13200,12 @@ MonoBehaviour:
   poisoncolour:
     serializedVersion: 2
     rgba: 4287628864
+  firecolour:
+    serializedVersion: 2
+    rgba: 4278232575
+  staticcolour:
+    serializedVersion: 2
+    rgba: 4278255615
   changing: 0
   damageAniTime: 0.33
   timex: 0
@@ -13311,6 +13323,12 @@ MonoBehaviour:
   poisoncolour:
     serializedVersion: 2
     rgba: 4287628864
+  firecolour:
+    serializedVersion: 2
+    rgba: 4278232575
+  staticcolour:
+    serializedVersion: 2
+    rgba: 4278255615
   changing: 0
   damageAniTime: 0.33
   timex: 0
@@ -13359,6 +13377,12 @@ MonoBehaviour:
   poisoncolour:
     serializedVersion: 2
     rgba: 4287628864
+  firecolour:
+    serializedVersion: 2
+    rgba: 4278232575
+  staticcolour:
+    serializedVersion: 2
+    rgba: 4278255615
   changing: 0
   damageAniTime: 0.33
   timex: 0

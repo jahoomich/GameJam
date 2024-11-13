@@ -14,6 +14,8 @@ public class Entity : MonoBehaviour
     [SerializeField] private Color32 dmgcolour = new Color32(255,0,0,255);
     [SerializeField] private Color32 healcolour = new Color32(0,255,0,255);
     [SerializeField] private Color32 poisoncolour = new Color32(64,6,144,255);
+    [SerializeField] private Color32 firecolour = new Color32(255,165,0,255);
+    [SerializeField] private Color32 staticcolour = new Color32(255,255,0,255);
     public bool changing = false;
     [SerializeField] private float damageAniTime;
     public float timex = 0;
@@ -91,10 +93,18 @@ public class Entity : MonoBehaviour
         {
             switch(debuff.type){ //types of debuffs
                 case 1: //fire
+                    if(change < 0){
+                        change *= 1.5f;
+                        updateVal(change, firecolour);
+                        damageEffects.SetActive(true);
+                        changing = true;
+                    }
                     break;
                 case 2: //static
                     //update a bool here IsStatic
+                    //Debug.Log("Curious");
                     action.isStatic = true;
+                    updateVal(change, staticcolour);
                     break;
                 case 3: //poisen
                     if(change < 0){

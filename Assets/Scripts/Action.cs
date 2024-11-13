@@ -36,7 +36,7 @@ public class Action : MonoBehaviour
     {
         get { return isdebuff; }
     }
-    [SerializeField] private bool IsStatic;
+    [SerializeField] private bool IsStatic = false;
     //istatic getter
     public bool isStatic{
         get{

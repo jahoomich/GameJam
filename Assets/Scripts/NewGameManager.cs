@@ -124,9 +124,8 @@ public class newGameManager : MonoBehaviour
 
     private void npcAction()
     {
-        if (activeChar == 1 || activeChar == 2 && action.isStatic == false) { 
-            //Debug.Log("Confused.com");
-            action = teammateaction; 
+        if (activeChar == 1 || activeChar == 2) { 
+                action = teammateaction; 
         }
         if (activeChar == 3) { 
             action = bossaction; 
@@ -153,6 +152,9 @@ public class newGameManager : MonoBehaviour
     {
         if (activeChar == 3) { 
             activeChar = 0;
+        }else if(teammateaction.IsDebuff == true && activeChar == 1 || activeChar ==2){
+            activeChar = 3;
+            ExecuteTurn(); 
         }
         else { 
             activeChar++;
