@@ -31,8 +31,17 @@ public class ActionPopupSystem : MonoBehaviour
 
     public GameObject spellsSection;
     public Button spellsBackButton;
-    public Button spellsPoisonButton;
+    public GameObject spellsPoisonSection;
     public Button spellsFireButton;
+    public GameObject spellsParalyzeSection;
+
+    public Button poisonArcherButton;
+    public Button poisonKnightButton;
+    public Button poisonBackButton;
+
+    public Button paralyzeArcherButton;
+    public Button paralyzeKnightButton;
+    public Button paralyzeBackButton;
 
 
 
@@ -72,7 +81,30 @@ public class ActionPopupSystem : MonoBehaviour
         spellsSection.SetActive(false);
     }
 
+
+
     //----------------------------------------
+
+    public void PoisonPopUp()
+    {
+        spellsPoisonSection.SetActive(true);
+    }
+
+    public void PoisonPopDown()
+    {
+        spellsPoisonSection.SetActive(false);
+    }
+    //------------------------------------------------
+
+    public void ParalyzePopUp()
+    {
+        spellsParalyzeSection.SetActive(true);
+    }
+
+    public void ParalyzePopDown()
+    {
+        spellsParalyzeSection.SetActive(false);
+    }
 
     void Start()
     {
