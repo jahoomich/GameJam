@@ -626,6 +626,7 @@ MonoBehaviour:
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -1046,6 +1047,7 @@ MonoBehaviour:
   target: 02000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -1895,6 +1897,7 @@ MonoBehaviour:
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -2064,6 +2067,7 @@ MonoBehaviour:
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -2513,6 +2517,7 @@ MonoBehaviour:
   target: 01000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -2682,6 +2687,7 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -3157,6 +3163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 399835870}
+  text: {fileID: 0}
   gradient:
     serializedVersion: 2
     key0: {r: 0.6, g: 0.17254902, b: 0.2509804, a: 1}
@@ -3189,6 +3196,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 2146265467}
   target: {fileID: 1954407194563601786}
+  healthVal: 
 --- !u!1 &401577498
 GameObject:
   m_ObjectHideFlags: 0
@@ -3355,6 +3363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 425959994}
+  text: {fileID: 0}
   gradient:
     serializedVersion: 2
     key0: {r: 0.6, g: 0.17254902, b: 0.2509804, a: 1}
@@ -3387,6 +3396,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 1633413923}
   target: {fileID: 62351801904592118}
+  healthVal: 
 --- !u!114 &425959994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4440,6 +4450,7 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -4826,6 +4837,7 @@ MonoBehaviour:
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -5260,6 +5272,7 @@ MonoBehaviour:
   target: 01000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -5651,6 +5664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 975569249}
+  text: {fileID: 0}
   gradient:
     serializedVersion: 2
     key0: {r: 0.6, g: 0.17254902, b: 0.2509804, a: 1}
@@ -5683,6 +5697,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 1337403450}
   target: {fileID: 7644786847066662469}
+  healthVal: 
 --- !u!114 &975569249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6806,6 +6821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1172906861}
+  text: {fileID: 0}
   gradient:
     serializedVersion: 2
     key0: {r: 0.6, g: 0.17254902, b: 0.2509804, a: 1}
@@ -6838,6 +6854,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fill: {fileID: 585215000}
   target: {fileID: 6702078893700298419}
+  healthVal: 
 --- !u!114 &1172906861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7057,6 +7074,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1273461500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273461501}
+  m_Layer: 0
+  m_Name: Effects manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1273461501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273461500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19747892, y: -0.0462465, z: 0.010234749}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1285411368
 GameObject:
   m_ObjectHideFlags: 0
@@ -12419,6 +12467,7 @@ MonoBehaviour:
   target: 02000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -12695,6 +12744,7 @@ MonoBehaviour:
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -13459,6 +13509,7 @@ MonoBehaviour:
   target: 000000000100000002000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -13480,6 +13531,7 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -13621,6 +13673,7 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -16564,6 +16617,7 @@ MonoBehaviour:
   target: 01000000
   eltype: 0
   isdebuff: 0
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -21697,6 +21751,7 @@ MonoBehaviour:
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
+  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -21932,6 +21987,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  damageEffects: {fileID: 0}
+  text: {fileID: 0}
+  dmgcolour:
+    serializedVersion: 2
+    rgba: 4278190335
+  healcolour:
+    serializedVersion: 2
+    rgba: 4278255360
+  poisoncolour:
+    serializedVersion: 2
+    rgba: 4287628864
+  firecolour:
+    serializedVersion: 2
+    rgba: 4278232575
+  staticcolour:
+    serializedVersion: 2
+    rgba: 4278255615
+  changing: 0
+  damageAniTime: 0
+  timex: 0
+  changeVal: 
   maxhealth: 100
 --- !u!114 &1408169009222235002
 MonoBehaviour:
@@ -21946,6 +22022,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  damageEffects: {fileID: 0}
+  text: {fileID: 0}
+  dmgcolour:
+    serializedVersion: 2
+    rgba: 4278190335
+  healcolour:
+    serializedVersion: 2
+    rgba: 4278255360
+  poisoncolour:
+    serializedVersion: 2
+    rgba: 4287628864
+  firecolour:
+    serializedVersion: 2
+    rgba: 4278232575
+  staticcolour:
+    serializedVersion: 2
+    rgba: 4278255615
+  changing: 0
+  damageAniTime: 0
+  timex: 0
+  changeVal: 
   maxhealth: 100
 --- !u!1 &1954407194563601786
 GameObject:
@@ -22048,6 +22145,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  damageEffects: {fileID: 0}
+  text: {fileID: 0}
+  dmgcolour:
+    serializedVersion: 2
+    rgba: 4278190335
+  healcolour:
+    serializedVersion: 2
+    rgba: 4278255360
+  poisoncolour:
+    serializedVersion: 2
+    rgba: 4287628864
+  firecolour:
+    serializedVersion: 2
+    rgba: 4278232575
+  staticcolour:
+    serializedVersion: 2
+    rgba: 4278255615
+  changing: 0
+  damageAniTime: 0
+  timex: 0
+  changeVal: 
   maxhealth: 250
 --- !u!1 &7644786847066662469
 GameObject:
@@ -22081,6 +22199,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  damageEffects: {fileID: 0}
+  text: {fileID: 0}
+  dmgcolour:
+    serializedVersion: 2
+    rgba: 4278190335
+  healcolour:
+    serializedVersion: 2
+    rgba: 4278255360
+  poisoncolour:
+    serializedVersion: 2
+    rgba: 4287628864
+  firecolour:
+    serializedVersion: 2
+    rgba: 4278232575
+  staticcolour:
+    serializedVersion: 2
+    rgba: 4278255615
+  changing: 0
+  damageAniTime: 0
+  timex: 0
+  changeVal: 
   maxhealth: 200
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -22096,3 +22235,4 @@ SceneRoots:
   - {fileID: 132594891}
   - {fileID: 573735596}
   - {fileID: 2132193907}
+  - {fileID: 1273461501}
