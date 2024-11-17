@@ -70,6 +70,7 @@ public class newGameManager : MonoBehaviour
             if (action.IsDebuff)
             {
                 characters[target].AddDebuff(action.Debuff);
+                Static.elTarget(target);
                 Debug.Log("debuf !");
                 actionNotif.Setup(2, 0);
             }
@@ -152,10 +153,14 @@ public class newGameManager : MonoBehaviour
     {
         if (activeChar == 3) { 
             activeChar = 0;
-        }else if(Static.IsStatic == true){
+        }else if(Static.IsStaticKnight == true){
             activeChar = 3;
-            Static.IsStatic = false;
-            Debug.Log("what is happenning");
+            Static.IsStaticKnight = false;
+            yield return new WaitForSeconds(seconds);
+            ExecuteTurn(); 
+        }else if(Static.IsStaticArcher == true){
+            activeChar = 2;
+            Static.IsStaticArcher = false;
             yield return new WaitForSeconds(seconds);
             ExecuteTurn(); 
         }

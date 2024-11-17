@@ -102,7 +102,11 @@ public class Entity : MonoBehaviour
                     break;
                 case 2: //static
                     //update a bool here IsStatic
-                    Static.IsStatic = true;
+                    if(Static.Target == 1){
+                        Static.IsStaticArcher = true;
+                    }else if(Static.Target == 2){
+                        Static.IsStaticKnight = true;
+                    }
                     //Debug.Log("what is going "+Static.IsStatic);
                     updateVal(change, staticcolour);
                     break;
