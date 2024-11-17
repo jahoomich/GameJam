@@ -1001,7 +1001,6 @@ MonoBehaviour:
   target: 02000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -1946,7 +1945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &318221984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1995,7 +1994,6 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -2197,10 +2195,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   dmg: 0
   suspicion: 30
-  target: 0100000002000000
-  eltype: 3
+  target: 01000000
+  eltype: 2
   isdebuff: 1
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -2216,7 +2213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &339195962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2475,7 +2472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &359522012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,7 +2521,6 @@ MonoBehaviour:
   target: 01000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -3403,10 +3399,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   dmg: 0
   suspicion: 30
-  target: 0100000002000000
-  eltype: 3
+  target: 02000000
+  eltype: 2
   isdebuff: 1
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -3422,7 +3417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &492877297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4553,7 +4548,6 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -4962,7 +4956,6 @@ MonoBehaviour:
   target: 02000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -10072,7 +10065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &809215291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10118,10 +10111,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   dmg: 0
   suspicion: 30
-  target: 0100000002000000
+  target: 02000000
   eltype: 3
   isdebuff: 1
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -10452,7 +10444,6 @@ MonoBehaviour:
   target: 01000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -11127,7 +11118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &939154630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11173,10 +11164,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   dmg: 0
   suspicion: 30
-  target: 0100000002000000
+  target: 01000000
   eltype: 3
   isdebuff: 1
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -18826,7 +18816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &1403508250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18872,10 +18862,9 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   dmg: 30
   suspicion: -10
-  target: 01000000
+  target: 02000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -19073,7 +19062,6 @@ MonoBehaviour:
   target: 0100000002000000
   eltype: 3
   isdebuff: 1
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2
@@ -19971,7 +19959,6 @@ MonoBehaviour:
   target: 000000000100000002000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -19993,7 +19980,6 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -21954,7 +21940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &1857305379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22003,7 +21989,6 @@ MonoBehaviour:
   target: 03000000
   eltype: 0
   isdebuff: 0
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 0
@@ -22272,7 +22257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d8607fe14af3f43b8ced45010f3842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1595688506}
 --- !u!114 &1964388960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22317,11 +22302,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   dmg: 0
-  suspicion: 30
+  suspicion: 60
   target: 0100000002000000
-  eltype: 3
+  eltype: 1
   isdebuff: 1
-  IsStatic: 0
   isheal: 0
   isattack: 0
   debuffTimer: 2

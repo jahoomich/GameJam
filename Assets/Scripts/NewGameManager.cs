@@ -152,8 +152,11 @@ public class newGameManager : MonoBehaviour
     {
         if (activeChar == 3) { 
             activeChar = 0;
-        }else if(teammateaction.IsDebuff == true && activeChar == 1 || activeChar ==2){
+        }else if(Static.IsStatic == true){
             activeChar = 3;
+            Static.IsStatic = false;
+            Debug.Log("what is happenning");
+            yield return new WaitForSeconds(seconds);
             ExecuteTurn(); 
         }
         else { 

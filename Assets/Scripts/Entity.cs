@@ -10,7 +10,7 @@ public class Entity : MonoBehaviour
     [SerializeField] private int id; //may go unused, but ideally, could be used to target
     public GameObject damageEffects;
     public TMP_Text text;
-    private Action action;
+    //[SerializeField] private Action action;
     [SerializeField] private Color32 dmgcolour = new Color32(255,0,0,255);
     [SerializeField] private Color32 healcolour = new Color32(0,255,0,255);
     [SerializeField] private Color32 poisoncolour = new Color32(64,6,144,255);
@@ -102,11 +102,11 @@ public class Entity : MonoBehaviour
                     break;
                 case 2: //static
                     //update a bool here IsStatic
-                    //Debug.Log("Curious");
-                    action.isStatic = true;
+                    Static.IsStatic = true;
+                    //Debug.Log("what is going "+Static.IsStatic);
                     updateVal(change, staticcolour);
                     break;
-                case 3: //poisen
+                case 3: //poison
                     if(change < 0){
                         change *= 1.5f;
                         updateVal(change, poisoncolour);
@@ -161,6 +161,7 @@ public class Entity : MonoBehaviour
                 newlist.Add(debuff); 
             }
         }
+        //action.isStatic = false;
         debufflist = newlist;
         //Debug.Log(debufflist);
     }
