@@ -17,7 +17,6 @@ public class newGameManager : MonoBehaviour
     [SerializeField] private Action bossaction;
     [SerializeField] private SusBar suspicionBar;
     [SerializeField] private NotifManager notifManager;
-
     [SerializeField] private Notification actionNotif;
     public Action NewAction
     {
@@ -71,20 +70,20 @@ public class newGameManager : MonoBehaviour
             {
                 characters[target].AddDebuff(action.Debuff);
                 Static.elTarget(target);
-                Debug.Log("debuf !");
+                //Debug.Log("debuf !");
                 actionNotif.Setup(2, 0);
             }
 
             if (action.IsHeal)
             {
-                Debug.Log("heal !");
+                //Debug.Log("heal !");
                 actionNotif.Setup(1, 0);
             }
 
 
             if (action.IsAttack)
             {
-                Debug.Log("attack !");
+                //Debug.Log("attack !");
                 actionNotif.Setup(0, 0);
             }
 

@@ -30,7 +30,9 @@ public class NotifManager : MonoBehaviour
 
     public void SetInactive(int iconid)
     {
-        icons[iconid].enabled = false;
+        //Debug.Log("PORQUUUEEEE");
+        icons[iconid].enabled= false;
+        //SetInactive(icons);
     }
 
     // Start is called before the first frame update

@@ -103,8 +103,10 @@ public class Entity : MonoBehaviour
                 case 2: //static
                     //update a bool here IsStatic
                     if(Static.Target == 1){
+                        //Debug.Log("Archer static");
                         Static.IsStaticArcher = true;
                     }else if(Static.Target == 2){
+                        //Debug.Log("Knight static");
                         Static.IsStaticKnight = true;
                     }
                     //Debug.Log("what is going "+Static.IsStatic);
@@ -164,6 +166,7 @@ public class Entity : MonoBehaviour
             { 
                 newlist.Add(debuff); 
             }
+            Debug.Log(debuff);
         }
         //action.isStatic = false;
         debufflist = newlist;
