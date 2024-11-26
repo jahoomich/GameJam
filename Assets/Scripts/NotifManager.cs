@@ -29,7 +29,8 @@ public class NotifManager : MonoBehaviour
 
     public void SetInactive(int iconid)
     {
-        //Debug.Log(icons[iconid]); //issue found debuff for archer and wizerd not false 
+        //Debug.Log(icons[iconid]); //issue found debuff for archer and wizerd not false, the issue is the tick down keeps getting reset so cant tick down
+        //update issue is because the of the struct so the data affected is always a copy so ultimatly nothing happens
         icons[iconid].enabled= false;
         //SetInactive(icons);
     }

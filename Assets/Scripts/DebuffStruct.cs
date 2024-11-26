@@ -7,26 +7,17 @@ public struct Debuff
 {
     //0-2 = elemental, 3 = vuln.
     public int type;
-    public int timer;
-    public bool IsValid
-    {
-        get 
-        {
-            if (timer != 0) { return true; }
-            return false;
-        }
-    }
+    // public bool IsValid
+    // {
+    //     get 
+    //     {
+    //         if (timer != 0) { return true; }
+    //         return false;
+    //     }
+    // }
 
-    public Debuff(int type, int timer) 
+    public Debuff(int type) 
     {
         this.type = type;
-        this.timer = timer;
-    }
-
-    public void TickDown()
-    {
-        Debug.Log("Before "+timer);
-        timer--;
-        Debug.Log("After "+timer);
     }
 }

@@ -68,7 +68,7 @@ public class Action : MonoBehaviour
     void Start()
     {
         debuff.type = eltype;
-        debuff.timer = debuffTimer;
+        //debuff.timer = debuffTimer;
         //Debug.Log(debuff.timer);
     }
 

@@ -17,6 +17,8 @@ public class Entity : MonoBehaviour
     [SerializeField] private Color32 firecolour = new Color32(255,165,0,255);
     [SerializeField] private Color32 staticcolour = new Color32(255,255,0,255);
     public bool changing = false;
+    [SerializeField] private int Timer;
+    private int timer;
     [SerializeField] private float damageAniTime;
     public float timex = 0;
     [SerializeField] private string changeVal = "";
@@ -68,6 +70,7 @@ public class Entity : MonoBehaviour
         health = maxhealth;
         //Debug.Log(string.Format("Health set to max, {0} = {1}", health, maxhealth));
         m_Animator = gameObject.GetComponent<Animator>();
+        timer = Timer;
     }
 
     // Update is called once per frame
@@ -128,9 +131,8 @@ public class Entity : MonoBehaviour
             //     damageEffects.SetActive(true);
             //     changing = true;
             // }
-            debuff.TickDown();
+            tickDown();
         }
-
         //branch if changehealth action is negative/damaging
         if (change < 0)
         {
@@ -162,11 +164,14 @@ public class Entity : MonoBehaviour
         List<Debuff> newlist = new List<Debuff>();
         foreach (Debuff debuff in debufflist)
         {
-            if (debuff.timer != 0)
+            if (timer != 0)
             { 
                 newlist.Add(debuff); 
             }
             //Debug.Log(debuff);
+        }
+        if(timer == 0){
+            timer = Timer;
         }
         //action.isStatic = false;
         debufflist = newlist;
@@ -195,5 +200,8 @@ public class Entity : MonoBehaviour
         changeVal = string.Format("{0:N0}", change);
         text.color = colour;
         text.text = string.Format("{0} {1}", changeVal, "");
+    }
+    void tickDown(){
+        timer--;
     }
 }

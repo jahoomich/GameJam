@@ -22945,6 +22945,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4278255615
   changing: 0
+  Timer: 0
   damageAniTime: 0.33
   timex: 0
   changeVal: 
@@ -22980,6 +22981,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4278255615
   changing: 0
+  Timer: 2
   damageAniTime: 0.33
   timex: 0
   changeVal: 
@@ -23103,6 +23105,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4278255615
   changing: 0
+  Timer: 0
   damageAniTime: 0.33
   timex: 0
   changeVal: 
@@ -23157,6 +23160,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4278255615
   changing: 0
+  Timer: 2
   damageAniTime: 0.33
   timex: 0
   changeVal: 
