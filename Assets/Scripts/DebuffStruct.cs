@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public struct Debuff
@@ -24,6 +25,8 @@ public struct Debuff
 
     public void TickDown()
     {
+        Debug.Log("Before "+timer);
         timer--;
+        Debug.Log("After "+timer);
     }
 }

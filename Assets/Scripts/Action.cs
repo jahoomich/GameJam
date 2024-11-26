@@ -5,6 +5,7 @@ using UnityEngine;
 public class Action : MonoBehaviour
 {
     public AudioSource audioSource;
+    public int test = 0;
     public override string ToString() { return ""; }
     [SerializeField] private int dmg; //damage should be negative by default to inflict damage, positive for healing
     public int Damage
@@ -63,12 +64,12 @@ public class Action : MonoBehaviour
     {
         get { return debuff; }
     }
-
     // Start is called before the first frame update
     void Start()
     {
         debuff.type = eltype;
         debuff.timer = debuffTimer;
+        //Debug.Log(debuff.timer);
     }
 
     // Update is called once per frame

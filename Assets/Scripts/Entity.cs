@@ -46,7 +46,7 @@ public class Entity : MonoBehaviour
             if (health > 0)
             {
                 //Debug.Log("character is alive lol");
-                Debug.Log(string.Format("Health, maxhealth, {0}, {1}", health, maxhealth));
+                //Debug.Log(string.Format("Health, maxhealth, {0}, {1}", health, maxhealth));
                 return true;
             }
             else { return false; }
@@ -66,7 +66,7 @@ public class Entity : MonoBehaviour
     void Start()
     {
         health = maxhealth;
-        Debug.Log(string.Format("Health set to max, {0} = {1}", health, maxhealth));
+        //Debug.Log(string.Format("Health set to max, {0} = {1}", health, maxhealth));
         m_Animator = gameObject.GetComponent<Animator>();
     }
 
@@ -87,7 +87,7 @@ public class Entity : MonoBehaviour
     //if change < 0, action is damaging
     public void ChangeHealth(float change)
     {
-        Debug.Log(string.Format("Changehealth called {0}", change));
+        //Debug.Log(string.Format("Changehealth called {0}", change));
         //here also for new debuff types
         foreach (Debuff debuff in debufflist)
         {
@@ -166,7 +166,7 @@ public class Entity : MonoBehaviour
             { 
                 newlist.Add(debuff); 
             }
-            Debug.Log(debuff);
+            //Debug.Log(debuff);
         }
         //action.isStatic = false;
         debufflist = newlist;

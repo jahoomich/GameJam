@@ -19,7 +19,6 @@ public class NotifManager : MonoBehaviour
     {
         icons[iconid].enabled = true;
     }
-
     public void SetInactive(List<Image> icons)
     {
         foreach (Image icon in icons)
@@ -30,7 +29,7 @@ public class NotifManager : MonoBehaviour
 
     public void SetInactive(int iconid)
     {
-        //Debug.Log("PORQUUUEEEE");
+        //Debug.Log(icons[iconid]); //issue found debuff for archer and wizerd not false 
         icons[iconid].enabled= false;
         //SetInactive(icons);
     }
