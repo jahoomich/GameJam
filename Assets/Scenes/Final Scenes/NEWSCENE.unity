@@ -10124,7 +10124,7 @@ MonoBehaviour:
   isdebuff: 1
   isheal: 0
   isattack: 0
-  debuffTimer: 0
+  debuffTimer: 2
 --- !u!222 &809215293
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11179,7 +11179,7 @@ MonoBehaviour:
   isdebuff: 1
   isheal: 0
   isattack: 0
-  debuffTimer: 0
+  debuffTimer: 2
 --- !u!222 &939154632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19076,7 +19076,7 @@ MonoBehaviour:
   isdebuff: 1
   isheal: 0
   isattack: 0
-  debuffTimer: 2
+  debuffTimer: 0
 --- !u!1 &1444033164
 GameObject:
   m_ObjectHideFlags: 0
