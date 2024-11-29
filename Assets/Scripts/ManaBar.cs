@@ -15,9 +15,9 @@ public class ManaBar : MonoBehaviour
     public static int check;
 
     public void SetMana(float manaVal) {
-        if(manaVal >0) {
+        if(manaVal !=0) {
             //adds mana value
-            slider.value -= manaVal;
+            slider.value += manaVal;
             manaCheck();
         }
     }
@@ -29,11 +29,12 @@ public class ManaBar : MonoBehaviour
     }
     public void canAttack(float manaAmount){
         float checkValue = slider.value;
-        if(checkValue-manaAmount<0){
+        if(checkValue+manaAmount<=0){
             hasEnoughMana = false;
         }else{
             hasEnoughMana = true;
         }
+        //Debug.Log(HasEnoughMana);
     }
     public bool HasMana{
         get{return hasMana;}

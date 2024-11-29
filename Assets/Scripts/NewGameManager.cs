@@ -42,9 +42,13 @@ public class newGameManager : MonoBehaviour
             npcAction();
         }
         //debufftick();
-        executeaction();
-        checkChars();
-        action = null;
+        manaBar.canAttack(action.Mana);
+        if(manaBar.HasMana == true && manaBar.HasEnoughMana == true){
+            executeaction();
+            checkChars();
+            action = null;
+            StartCoroutine(changeturn());
+        }
         if (winCondition())
         {
             SceneManager.LoadScene("Win");
@@ -53,7 +57,6 @@ public class newGameManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameOverScene");
         }
-        StartCoroutine(changeturn());
         // if (activeChar != 0) { 
         //     ExecuteTurn(); 
         //     Debug.Log("confused.com");
@@ -67,32 +70,31 @@ public class newGameManager : MonoBehaviour
         foreach (int target in action.Targets)
         {
             characters[target].ChangeHealth(action.Damage);
-            manaBar.canAttack(action.Mana);
-            if(manaBar.HasMana == true && manaBar.HasEnoughMana == true){
-                if (action.IsDebuff)
-                {
-                    characters[target].AddDebuff(action.Debuff);
-                    Static.elTarget(target);
-                    //Debug.Log("debuf !");
-                    actionNotif.Setup(2, 0);
-                }
+            if (action.IsDebuff)
+            {
+                characters[target].AddDebuff(action.Debuff);
+                Static.elTarget(target);
+                //Debug.Log("debuf !");
+                actionNotif.Setup(2, 0);
+            }
 
-                if (action.IsHeal)
-                {
-                    //Debug.Log("heal !");
-                    actionNotif.Setup(1, 0);
-                }
-
-
-                if (action.IsAttack)
-                {
-                    //Debug.Log("attack !");
-                    actionNotif.Setup(0, 0);
-                }
+            if (action.IsHeal)
+            {
+                //Debug.Log("heal !");
+                actionNotif.Setup(1, 0);
             }
 
 
+            if (action.IsAttack)
+            {
+                //Debug.Log("attack !");
+                actionNotif.Setup(0, 0);
+            }
+                //damn have to make it so cant press the button 
+
+
         }
+        manaBar.SetMana(action.Mana);
         suspicionBar.SetSus(action.Suspicion);
         //consider elemental debuffs
     }
