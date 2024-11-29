@@ -3344,7 +3344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.093567, y: 1.707489}
+  m_AnchoredPosition: {x: -4.91, y: 2.67}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &492877293
@@ -3385,7 +3385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.81, y: 1.69}
+  m_AnchoredPosition: {x: -4.88, y: 1.7}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492877295
@@ -4982,18 +4982,53 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744621000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.007172072}
+  m_LocalPosition: {x: 0, y: 0, z: -0.007172073}
   m_LocalScale: {x: 0.008903807, y: 0.008903807, z: 0.008903807}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 27752380}
-  m_Father: {fileID: 887271778}
+  m_Father: {fileID: 780838315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -4.894348, y: 1.725296}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &780838314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 780838315}
+  m_Layer: 0
+  m_Name: Main Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &780838315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780838314}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1783641593}
+  - {fileID: 934166036}
+  - {fileID: 817456750}
+  - {fileID: 744621006}
+  m_Father: {fileID: 887271778}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &782171778
 GameObject:
   m_ObjectHideFlags: 0
@@ -10274,12 +10309,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817456746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.007172072}
+  m_LocalPosition: {x: 0, y: 0, z: -0.007172073}
   m_LocalScale: {x: 0.008903807, y: 0.008903807, z: 0.008903807}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 552037746}
-  m_Father: {fileID: 887271778}
+  m_Father: {fileID: 780838315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10490,7 +10525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &833017555
@@ -10675,10 +10710,7 @@ Transform:
   m_LocalScale: {x: 112.31151, y: 112.31151, z: 112.31151}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1783641593}
-  - {fileID: 934166036}
-  - {fileID: 817456750}
-  - {fileID: 744621006}
+  - {fileID: 780838315}
   - {fileID: 2114225919}
   - {fileID: 538311948}
   - {fileID: 881517955}
@@ -10701,6 +10733,7 @@ MonoBehaviour:
   popUpBox: {fileID: 0}
   animator: {fileID: 0}
   popUpText: {fileID: 0}
+  mainSection: {fileID: 780838314}
   attacksButton: {fileID: 1783641590}
   healingButton: {fileID: 817456747}
   spellsButton: {fileID: 934166033}
@@ -10988,12 +11021,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934166032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.007172072}
+  m_LocalPosition: {x: 0, y: 0, z: -0.007172073}
   m_LocalScale: {x: 0.008903807, y: 0.008903807, z: 0.008903807}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1233377364}
-  m_Father: {fileID: 887271778}
+  m_Father: {fileID: 780838315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11606,7 +11639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9, y: 2.68}
+  m_AnchoredPosition: {x: -7.11, y: 1.71}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &975569246
@@ -12737,7 +12770,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 887271779}
         m_TargetAssemblyTypeName: ActionPopupSystem, Assembly-CSharp
-        m_MethodName: SpellsPopDown
+        m_MethodName: PoisonPopDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12802,7 +12835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9, y: 2.68}
+  m_AnchoredPosition: {x: -7.13, y: 2.68}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1210072624 stripped
@@ -13685,7 +13718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.894348, y: 1.725296}
+  m_AnchoredPosition: {x: -7.07, y: 2.66}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1337403448
@@ -13799,7 +13832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.9, y: 2.68}
+  m_AnchoredPosition: {x: -4.88, y: 2.68}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348853455
@@ -13848,7 +13881,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 887271779}
         m_TargetAssemblyTypeName: ActionPopupSystem, Assembly-CSharp
-        m_MethodName: SpellsPopDown
+        m_MethodName: ParalyzePopDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21534,12 +21567,12 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783641589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.007172072}
+  m_LocalPosition: {x: 0, y: 0, z: -0.007172073}
   m_LocalScale: {x: 0.008903807, y: 0.008903807, z: 0.008903807}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 239211966}
-  m_Father: {fileID: 887271778}
+  m_Father: {fileID: 780838315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21689,7 +21722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.1035676, y: 1.69}
+  m_AnchoredPosition: {x: -4.9, y: 2.64}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1811497751
@@ -21879,6 +21912,7 @@ GameObject:
   - component: {fileID: 1857305377}
   - component: {fileID: 1857305378}
   - component: {fileID: 1857305380}
+  - component: {fileID: 1857305383}
   m_Layer: 5
   m_Name: Attack Type 1
   m_TagString: Untagged
@@ -22035,6 +22069,27 @@ RectTransform:
   m_AnchoredPosition: {x: -4.894348, y: 2.660202}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1857305383
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857305376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b67393a040571942830f6414e91425b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1926039715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22706,7 +22761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2114225919
 Transform:
   m_ObjectHideFlags: 0
