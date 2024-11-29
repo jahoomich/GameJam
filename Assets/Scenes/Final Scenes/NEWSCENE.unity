@@ -1701,6 +1701,7 @@ GameObject:
   - component: {fileID: 318221982}
   - component: {fileID: 318221983}
   - component: {fileID: 318221985}
+  - component: {fileID: 318221988}
   m_Layer: 5
   m_Name: Attack Type 2
   m_TagString: Untagged
@@ -1858,6 +1859,27 @@ RectTransform:
   m_AnchoredPosition: {x: -7.093567, y: 1.707489}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &318221988
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318221981}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 516343273c03756419c17bd0e8563d5a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &323317232
 GameObject:
   m_ObjectHideFlags: 0
@@ -4514,7 +4536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &780838315
 Transform:
   m_ObjectHideFlags: 0
@@ -10067,7 +10089,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpBox: {fileID: 0}
-  animator: {fileID: 0}
   popUpText: {fileID: 0}
   mainSection: {fileID: 780838314}
   attacksButton: {fileID: 1783641590}
@@ -10093,6 +10114,8 @@ MonoBehaviour:
   paralyzeArcherButton: {fileID: 339195962}
   paralyzeKnightButton: {fileID: 492877297}
   paralyzeBackButton: {fileID: 1348853455}
+  attack1Anim: {fileID: 1857305383}
+  attack2Anim: {fileID: 318221988}
 --- !u!1 &889574720
 GameObject:
   m_ObjectHideFlags: 0
@@ -21763,7 +21786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2114225919
 Transform:
   m_ObjectHideFlags: 0

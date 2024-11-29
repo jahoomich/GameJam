@@ -8,7 +8,6 @@ public class ActionPopupSystem : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject popUpBox;
-    public Animator animator;
     public TMP_Text popUpText;
 
     public GameObject mainSection;
@@ -44,6 +43,10 @@ public class ActionPopupSystem : MonoBehaviour
     public Button paralyzeKnightButton;
     public Button paralyzeBackButton;
 
+    //--------1-1-1-1-1--1-1-1-1-1-1-1---1-1-1-1-1-1--1-1-1-1-1
+
+    public Animator attack1Anim;
+    public Animator attack2Anim;
 
 
     //----------------------------------------
@@ -52,6 +55,8 @@ public class ActionPopupSystem : MonoBehaviour
     {
         attacksSection.SetActive(true);
         mainSection.SetActive(false);
+        attack1Anim.SetTrigger("move");
+        attack2Anim.SetTrigger("move");
     }
 
     public void AttacksPopDown()
