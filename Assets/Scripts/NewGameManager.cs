@@ -16,6 +16,7 @@ public class newGameManager : MonoBehaviour
     [SerializeField] private Action teammateaction;
     [SerializeField] private Action bossaction;
     [SerializeField] private SusBar suspicionBar;
+    [SerializeField] private ManaBar manaBar;
     [SerializeField] private NotifManager notifManager;
     [SerializeField] private Notification actionNotif;
     public Action NewAction
@@ -66,25 +67,28 @@ public class newGameManager : MonoBehaviour
         foreach (int target in action.Targets)
         {
             characters[target].ChangeHealth(action.Damage);
-            if (action.IsDebuff)
-            {
-                characters[target].AddDebuff(action.Debuff);
-                Static.elTarget(target);
-                //Debug.Log("debuf !");
-                actionNotif.Setup(2, 0);
-            }
+            manaBar.canAttack(action.Mana);
+            if(manaBar.HasMana == true && manaBar.HasEnoughMana == true){
+                if (action.IsDebuff)
+                {
+                    characters[target].AddDebuff(action.Debuff);
+                    Static.elTarget(target);
+                    //Debug.Log("debuf !");
+                    actionNotif.Setup(2, 0);
+                }
 
-            if (action.IsHeal)
-            {
-                //Debug.Log("heal !");
-                actionNotif.Setup(1, 0);
-            }
+                if (action.IsHeal)
+                {
+                    //Debug.Log("heal !");
+                    actionNotif.Setup(1, 0);
+                }
 
 
-            if (action.IsAttack)
-            {
-                //Debug.Log("attack !");
-                actionNotif.Setup(0, 0);
+                if (action.IsAttack)
+                {
+                    //Debug.Log("attack !");
+                    actionNotif.Setup(0, 0);
+                }
             }
 
 

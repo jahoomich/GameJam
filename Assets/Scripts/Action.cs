@@ -28,6 +28,11 @@ public class Action : MonoBehaviour
     {
         get { return suspicion; }
     }
+    [SerializeField] private int mana; //cost in mana, this only comes up when the wizard takes action
+    public int Mana
+    {
+        get { return mana; }
+    }
 
     [SerializeField] private List<int> target; //who is the action targeting?
     public List<int> Targets
