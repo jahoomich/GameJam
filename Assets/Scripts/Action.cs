@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,11 +7,20 @@ public class Action : MonoBehaviour
 {
     public AudioSource audioSource;
     public int test = 0;
+    System.Random rnd = new System.Random();
     public override string ToString() { return ""; }
     [SerializeField] private int dmg; //damage should be negative by default to inflict damage, positive for healing
+    [SerializeField] private int dmgRange;
     public int Damage
     {
-        get { return dmg; }
+        get { return DamageRange(dmg); }
+    }
+    private int DamageRange(int Dmg){
+        if(Dmg<0){
+            return rnd.Next(Dmg+dmgRange,Dmg);
+        }else{
+            return rnd.Next(Dmg,Dmg+dmgRange);
+        }
     }
 
     [SerializeField] private int suspicion; //cost in suspicion, this only comes up when the wizard takes action

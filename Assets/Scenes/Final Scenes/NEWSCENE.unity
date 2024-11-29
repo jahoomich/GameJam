@@ -998,6 +998,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 30
+  dmgRange: 10
   suspicion: -10
   target: 02000000
   eltype: 0
@@ -1992,6 +1993,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: -10
+  dmgRange: -10
   suspicion: -5
   target: 03000000
   eltype: 0
@@ -2197,6 +2199,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 0
+  dmgRange: 0
   suspicion: 30
   target: 01000000
   eltype: 2
@@ -2521,6 +2524,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 30
+  dmgRange: 10
   suspicion: -10
   target: 01000000
   eltype: 0
@@ -3403,6 +3407,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 0
+  dmgRange: 0
   suspicion: 30
   target: 02000000
   eltype: 2
@@ -4550,6 +4555,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: -10
+  dmgRange: -10
   suspicion: -5
   target: 03000000
   eltype: 0
@@ -4959,6 +4965,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 30
+  dmgRange: 0
   suspicion: -10
   target: 02000000
   eltype: 0
@@ -10153,6 +10160,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 0
+  dmgRange: 0
   suspicion: 30
   target: 02000000
   eltype: 3
@@ -10484,6 +10492,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 30
+  dmgRange: 10
   suspicion: -10
   target: 01000000
   eltype: 0
@@ -11206,6 +11215,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 0
+  dmgRange: 0
   suspicion: 30
   target: 01000000
   eltype: 3
@@ -18905,6 +18915,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 30
+  dmgRange: 10
   suspicion: -10
   target: 02000000
   eltype: 0
@@ -19103,6 +19114,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 0
+  dmgRange: 0
   suspicion: 30
   target: 0100000002000000
   eltype: 3
@@ -20001,6 +20013,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: -20
+  dmgRange: -10
   suspicion: 0
   target: 000000000100000002000000
   eltype: 0
@@ -20023,6 +20036,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: -20
+  dmgRange: -10
   suspicion: 0
   target: 03000000
   eltype: 0
@@ -22034,6 +22048,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: -10
+  dmgRange: -10
   suspicion: -5
   target: 03000000
   eltype: 0
@@ -22373,6 +22388,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   test: 0
   dmg: 0
+  dmgRange: 0
   suspicion: 60
   target: 0100000002000000
   eltype: 1
