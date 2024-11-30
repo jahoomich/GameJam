@@ -23,6 +23,7 @@ public class newGameManager : MonoBehaviour
     {
         set { action = value; }
     }
+    
 
     void Start()
     {
@@ -154,6 +155,7 @@ public class newGameManager : MonoBehaviour
         return false;
     }
 
+
     IEnumerator changeturn()
     {
         if (activeChar == 3) { 
@@ -182,3 +184,4 @@ public class newGameManager : MonoBehaviour
         }
     }
 }
+

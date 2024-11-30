@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Scenes/TitleScreen.unity
     guid: c0911d527be9c5b45b35de6fb4d85e4c
   - enabled: 1
+    path: Assets/Scenes/Final Scenes/Intro.unity
+    guid: 1192b6b003cb00e4bad7df61932c9e39
+  - enabled: 1
     path: Assets/Scenes/Final Scenes/NEWSCENE.unity
     guid: ec0b3c3239978e64ab9c61ed9bf3c4d1
   - enabled: 1
