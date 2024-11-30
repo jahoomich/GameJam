@@ -24,6 +24,7 @@ public class Switch : MonoBehaviour
             //switch to next scene
             Debug.Log("End game");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            /*SceneManager.LoadScene("NEWSCENE");*/
         }
 
         else

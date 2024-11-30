@@ -156,7 +156,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.401
-  m_Color: {r: 0.46792442, g: 0.23565315, b: 0.07769314, a: 1}
+  m_Color: {r: 0.4490565, g: 0.18984205, b: 0.0254183, a: 1}
   m_Intensity: 5.4
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.401
-  m_Color: {r: 0.509434, g: 0.10193742, b: 0.030758308, a: 1}
+  m_Color: {r: 0.6754716, g: 0.20642927, b: 0.107055895, a: 1}
   m_Intensity: 20.3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.07924521, g: 0.071769245, b: 0.07340727, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
