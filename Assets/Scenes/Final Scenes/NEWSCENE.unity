@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   test: 0
-  dmg: -10
+  dmg: -20
   dmgRange: -10
   suspicion: -5
   mana: -20
