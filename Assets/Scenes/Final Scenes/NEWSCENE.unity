@@ -12341,7 +12341,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _sizeScale: 100
-  _charAnimationDuration: 0.605
+  _charAnimationDuration: 0.6
   _editorTValue: 0
 --- !u!1 &1202179675
 GameObject:
@@ -20168,8 +20168,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <size=96.1355%>T</size><size=94.34311%>e</size><size=94.27876%>x</size><size=95.06199%>t</size><size=96.20565%>
-    </size><size=97.37221%>T</size><size=98.27183%>e</size><size=99.51545%>s</size><size=100.9686%>t</size><size=102.0726%>i</size><size=102.621%>n</size><size=103.6854%>g</size><size=105.0612%>!</size>
+  m_text: <size=107.1196%>T</size><size=105.0754%>e</size><size=102.3531%>x</size><size=101.1047%>t</size><size=99.58962%>
+    </size><size=97.0303%>T</size><size=94.7847%>e</size><size=94.1602%>s</size><size=94.77775%>t</size><size=95.87513%>i</size><size=97.09299%>n</size><size=98.0724%>g</size><size=99.21651%>!</size>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

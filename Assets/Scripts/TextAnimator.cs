@@ -48,18 +48,6 @@ public class TextAnimator : MonoBehaviour
 
     private void Update()
     {
-        
-
-        /*if (runningCoroutine != null)
-        {
-            //----
-        }
-
-        else
-        {
-            Debug.Log("Run again!");
-            runningCoroutine = StartCoroutine(routine: RunAnimation(waitForSeconds: 0));
-        }*/
 
         EvaluateRichText(_editorTValue);
     }
@@ -69,8 +57,7 @@ public class TextAnimator : MonoBehaviour
     {
         yield return new WaitForSeconds(waitForSeconds);
         float t = 0;
-        
-        while (true)
+        while(t <= 1f)
         {
             EvaluateRichText(t);
             t = _timeElapsed / _stringAnimationDuration;
@@ -78,11 +65,7 @@ public class TextAnimator : MonoBehaviour
 
             yield return null;
         }
-        yield return StartCoroutine(routine: RunAnimation(waitForSeconds: 0)); 
-
         //HELP I HAVE NO CLUE HOW TO DO THIS
-
-
     }
 
     void EvaluateRichText(float t)
