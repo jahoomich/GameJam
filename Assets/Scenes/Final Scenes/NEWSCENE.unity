@@ -1578,6 +1578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 272830017}
+  - component: {fileID: 272830018}
   m_Layer: 0
   m_Name: Effects manager
   m_TagString: Untagged
@@ -1600,6 +1601,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &272830018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272830016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f97894bc31ded4a8640ebafccb69e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &314856204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1701,7 +1714,6 @@ GameObject:
   - component: {fileID: 318221982}
   - component: {fileID: 318221983}
   - component: {fileID: 318221985}
-  - component: {fileID: 318221988}
   m_Layer: 5
   m_Name: Attack Type 2
   m_TagString: Untagged
@@ -1860,27 +1872,6 @@ RectTransform:
   m_AnchoredPosition: {x: -7.093567, y: 1.707489}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &318221988
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318221981}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 516343273c03756419c17bd0e8563d5a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &323317232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3508,7 +3499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &500935764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3645,7 +3636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &528419785
 Transform:
   m_ObjectHideFlags: 0
@@ -3671,10 +3662,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ec4a6d3e25cf9f04996e1d8bdd2ce1f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bbbf24631e6da2548acddbb293f7614d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.503
-  m_Pitch: 2.11
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -10156,8 +10147,8 @@ MonoBehaviour:
   paralyzeArcherButton: {fileID: 339195962}
   paralyzeKnightButton: {fileID: 492877297}
   paralyzeBackButton: {fileID: 1348853455}
-  attack1Anim: {fileID: 1857305383}
-  attack2Anim: {fileID: 318221988}
+  attack1Anim: {fileID: 0}
+  attack2Anim: {fileID: 0}
 --- !u!1 &889574720
 GameObject:
   m_ObjectHideFlags: 0
@@ -12199,7 +12190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1180138317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19896,7 +19887,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.9245283, g: 0.4954076, b: 0.6670559, a: 1}
+  m_Color: {r: 0.81509435, g: 0.4213884, b: 0.57887083, a: 1}
   m_Intensity: 1.49
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -20168,8 +20159,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <size=107.1196%>T</size><size=105.0754%>e</size><size=102.3531%>x</size><size=101.1047%>t</size><size=99.58962%>
-    </size><size=97.0303%>T</size><size=94.7847%>e</size><size=94.1602%>s</size><size=94.77775%>t</size><size=95.87513%>i</size><size=97.09299%>n</size><size=98.0724%>g</size><size=99.21651%>!</size>
+  m_text: <size=96.1355%>T</size><size=94.32272%>e</size><size=94.30007%>x</size><size=95.12724%>t</size><size=96.30792%>
+    </size><size=97.48278%>T</size><size=98.39838%>e</size><size=99.73032%>s</size><size=101.1947%>t</size><size=102.1968%>i</size><size=102.8006%>n</size><size=103.991%>g</size><size=105.4131%>!</size>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21538,7 +21529,6 @@ GameObject:
   - component: {fileID: 1857305377}
   - component: {fileID: 1857305378}
   - component: {fileID: 1857305380}
-  - component: {fileID: 1857305383}
   m_Layer: 5
   m_Name: Attack Type 1
   m_TagString: Untagged
@@ -21697,27 +21687,6 @@ RectTransform:
   m_AnchoredPosition: {x: -4.894348, y: 2.660202}
   m_SizeDelta: {x: 200, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1857305383
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857305376}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2b67393a040571942830f6414e91425b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1926039715
 SpriteRenderer:
   m_ObjectHideFlags: 0

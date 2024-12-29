@@ -6,6 +6,7 @@ using UnityEngine;
 public class Action : MonoBehaviour
 {
     public AudioSource audioSource;
+    
     public int test = 0;
     System.Random rnd = new System.Random();
     public override string ToString() { return ""; }
